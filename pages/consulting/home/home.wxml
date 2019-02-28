@@ -1,0 +1,12 @@
+<swiper class='ind-swiper' indicator-dots="true" indicator-color="rgba(214,241,243,1)" indicator-active-color="rgba(255,255,255,1)">
+  <swiper-item wx:for="{{ bannerList }}" wx:key="this" wx:for-index="index" wx:for-item="item">
+    <image src="{{item.img_url}}" class="slide-image" />
+  </swiper-item>
+</swiper>
+
+<view class='introduce'>
+  <import src="../../../wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+
+<view catchtap='sure' class='sure'>查看案列</view>

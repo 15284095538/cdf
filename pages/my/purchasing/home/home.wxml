@@ -1,0 +1,35 @@
+<view class="nav">
+  <view wx:for="{{nav}}" catchtap='navClick' data-status='{{item.status}}' data-index='{{index}}' wx:for-item="item" wx:for-index="index" wx:key="this" class='li {{ navIndex == index ? "chiose":"" }}'>{{item.txt}}</view>
+</view>
+
+<view class='list'>
+  <view wx:for="{{orderlist}}" catchtap='details' data-id='{{item.id}}' wx:for-item="item" wx:for-index="index" wx:key="this" class='li'>
+    <view class='line'>
+      <view class='l'>订单状态：</view>
+      <view class='r'>{{item.status_text}}</view>
+    </view>
+    <view class='line'>
+      <view class='l'>订单编号：</view>
+      <view class='r num'>{{item.number}}</view>
+    </view>
+    <view class='content'>
+      <view class='img'><image src='{{item.goods_img_url}}'></image></view>
+      <view class='title'>{{item.goods_title}}</view>
+      <view class='price'>{{item.price}}</view>
+    </view>
+
+    <!-- <view class='bot'>
+      <view catchtap='del' data-id='{{item.id}}' wx:if="{{ item.status == -10 }}" class='button close'>删除订单</view>
+      <view catchtap='cancel' data-id='{{item.id}}' wx:if="{{ item.status == 10 }}" class='button close'>取消订单</view>
+      <view catchtap='toPay' data-id='{{item.id}}' wx:if="{{ item.status == 10 }}" class='button'>待支付</view>
+      <view catchtap='take' data-id='{{item.id}}' wx:if="{{ item.status == 30 }}" class='button'>确认收货</view>
+    </view> -->
+  </view>
+</view>
+
+<view wx:if="{{ page == 1 && orderlist == '' }}" class='no-data'>
+  <view class='img'>
+    <image src='/images/no.png'></image>
+  </view>
+  <view>暂无数据</view>
+</view>

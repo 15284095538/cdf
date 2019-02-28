@@ -1,0 +1,7 @@
+<view class="newsList">
+  <view class='li'>
+    <view class='tit'>{{data.title}}</view>
+    <view class='content'>{{ data.content }}</view>
+    <view class='time'>{{data.create_time}}</view>
+  </view>
+</view>

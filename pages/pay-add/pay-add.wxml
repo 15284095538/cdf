@@ -1,0 +1,23 @@
+<view catchtap='layerDisplayClick' class="inputInt">
+  <view class='txt'>收货地址</view>
+  <view class='addressTxt'>{{ address }}</view>
+  <view class='arrow'>
+    <image src='/images/arrow2.png'></image>
+  </view>
+</view>
+
+<view wx:if="{{ layerDisplay }}" catchtap='layerDisplayF' class='layer'>
+  <view class='box'>
+    <view catchtap='receivingaddress' class='tit'>新增收货地址</view>
+    <scroll-view class="scroll-view_H" scroll-y>
+      <view data-id='{{item.id}}' data-txt='{{ item.area_text }}' catchtap='adressClick' wx:for="{{adressList}}" wx:key="this" wx:for-index="index" wx:for-item="item" class="address" data-index='{{index}}'>
+        <view class='name'>{{item.name}}
+          <text style='margin:0 0 0 20rpx;'>{{item.tel}}</text>
+        </view>
+        <view class='addr'>{{item.area_text}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<view catchtap='addClick' class='sure'>购买</view>

@@ -1,0 +1,84 @@
+page{
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.inputInt{
+  background-color: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+  overflow: hidden;
+  position: relative;
+}
+
+.picker{
+  width: 500rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: right;
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+}
+
+.inputInt .imgTxt{
+  width: 200rpx;
+  float: left;
+}
+
+.inputInt .getcode {
+  position: absolute;
+  right: 30rpx;
+  top: 0rpx;
+  height: 100upx;
+  font-size: 24upx;
+  color: #630;
+  z-index: 2;
+  line-height: 100rpx;
+}
+
+.inputInt .code{
+  right: 200rpx;
+}
+
+.inputInt .img{
+  width: 80rpx;
+  height: 80rpx;
+  float: right;
+  margin: 10rpx 0 0 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.inputInt input{
+  width: 500rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: right;
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+}
+
+.inputInt .img image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.sure {
+  position: fixed;
+  left: 60rpx;
+  bottom: 40rpx;
+  z-index: 9;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  width: 630rpx;
+  background-color: #663300;
+}

@@ -1,0 +1,86 @@
+page{
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.list .li{
+  padding: 30rpx 0;
+  background-color: #fff;
+  margin: 30rpx 0 0 0;
+  overflow: hidden;
+}
+
+.list .li .line{
+  padding: 0 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.list .li .line .l{
+  float: left
+}
+
+.list .li .line .r{
+  float: right;
+  color: #663300;
+}
+
+.list .li .line .num{
+  color: #a9a9a9;
+}
+
+.list .li .content{
+  padding: 20rpx 30rpx;
+  overflow: hidden;
+  border-top: 1rpx solid #e2e2e2;
+  border-bottom: 1rpx solid #e2e2e2;
+  background-color: #f5f5f5;
+  margin-top: 10rpx;
+}
+
+.list .li .content .img{
+  width: 240rpx;
+  height: 160rpx;
+  float: left;
+  margin-right: 40rpx;
+}
+
+.list .li .content .title{
+  margin-top: 20rpx;
+}
+
+.list .li .content .price{
+  margin-top: 20rpx;
+  color: #663300;
+}
+
+.list .li .content .img image{
+  width: 240rpx;
+  height: 160rpx;
+}
+
+.list .li .bot{
+  padding: 30rpx 0 0rpx 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.list .li .bot .button{
+  display: inline-block;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 150rpx;
+  border: 1rpx solid #663300;
+  font-size: 24rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  margin-right: 30rpx;
+  color: #663300;
+}
+
+.list .li .bot .close{
+  color: #a9a9a9;
+  border: 1rpx solid #a9a9a9;
+}

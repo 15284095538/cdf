@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "pages/index/home/home",
+    "pages/category/home/home",
+    "pages/my/home/home",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/register/agreement",
+    "pages/newsList/home/home",
+    "pages/newsList/details/details",
+    "pages/index/list/list",
+    "pages/index/details/details",
+    "pages/my/receivingaddress/home/home",
+    "pages/my/receivingaddress/addaddress/addaddress",
+    "pages/my/receivingaddress/edit/edit",
+    "pages/my/feedback/feedback",
+    "pages/my/about/about",
+    "pages/my/extension/extension",
+    "pages/my/editinfo/editinfo",
+    "pages/my/changpas/changpas",
+    "pages/my/forgetpas/forgetpas",
+    "pages/consulting/home/home",
+    "pages/consulting/list/list",
+    "pages/consulting/details/details",
+    "pages/pay-add/pay-add",
+    "pages/pay-dgadd/pay-dgadd",
+    "pages/my/order/home/home",
+    "pages/my/order/details/details",
+    "pages/my/bankcard/home/home",
+    "pages/my/bankcard/add/add",
+    "pages/my/bankcard/edit/edit",
+    "pages/my/withdrawal/withdrawal",
+    "pages/my/purchasing/home/home",
+    "pages/my/purchasing/details/details",
+    "pages/my/withdrawal/details"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "茶多酚",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9a9a9",
+    "selectedColor": "#663300",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/home/home",
+        "text": "首页",
+        "iconPath": "/images/1.png",
+        "selectedIconPath": "/images/2.png"
+      },
+      {
+        "pagePath": "pages/category/home/home",
+        "text": "分类",
+        "iconPath": "/images/3.png",
+        "selectedIconPath": "/images/4.png"
+      },
+      {
+        "pagePath": "pages/consulting/home/home",
+        "text": "咨询",
+        "iconPath": "/images/5.png",
+        "selectedIconPath": "/images/6.png"
+      },
+      {
+        "pagePath": "pages/newsList/home/home",
+        "text": "消息",
+        "iconPath": "/images/7.png",
+        "selectedIconPath": "/images/8.png"
+      },
+      {
+        "pagePath": "pages/my/home/home",
+        "text": "我的",
+        "iconPath": "/images/9.png",
+        "selectedIconPath": "/images/10.png"
+      }
+    ]
+  }
+}

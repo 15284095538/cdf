@@ -1,0 +1,23 @@
+<swiper class='ind-swiper' indicator-dots="true" indicator-color="rgba(214,241,243,1)" indicator-active-color="rgba(255,255,255,1)">
+  <swiper-item wx:for="{{ info.imgs }}" wx:key="this" wx:for-index="index" wx:for-item="item">
+    <image src="{{item.url}}" class="slide-image" />
+  </swiper-item>
+</swiper>
+
+<view class='sp-info'>
+  <view class='h5'>{{ info.title }}</view>
+  <view class='price'>￥{{ info.price }}元</view>
+</view>
+
+<view class='details'>
+  <import src="../../../wxParse/wxParse.wxml"/>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+<view class='layerPlay'>
+  <view catchtap='callPhone' class='consultation'>
+    <view class='img'><image src='/images/5.png'></image></view>
+    <view class='txt'>咨询</view>
+  </view>
+  <view catchtap='payClick' class='pay'>购买</view>
+</view>

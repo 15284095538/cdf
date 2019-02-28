@@ -1,0 +1,19 @@
+
+<view class='inputInt'>
+  <view class='imgTxt'>电话号码：</view>
+  <input type='password' placeholder='请输入电话号码' bindinput='tel' ></input>
+</view>
+
+<view class='inputInt'>
+  <view class='imgTxt'>验证码：</view>
+  <input type='password' placeholder='请输入验证码' class='code' bindinput='code' ></input>
+  <view catchtap='getcode' class="getcode">{{ codeTips }}</view>
+</view>
+
+<view class='inputInt'>
+  <view class='imgTxt'>密码：</view>
+  <input type='password' placeholder='请输入新密码' bindinput='password' ></input>
+</view>
+
+
+<view catchtap='sureClick' class='sure'>确认提交</view>

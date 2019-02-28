@@ -1,0 +1,48 @@
+page{
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.list .li{
+  padding: 30rpx;
+  width: 630rpx;
+  margin: 30rpx auto 0;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 30rpx;
+  display: flex;
+}
+
+.list .li .img{
+  width: 200rpx;
+  height: 100rpx;
+  display: inline-block;
+  margin-right: 30rpx;
+}
+
+.list .li .img image{
+  width: 200rpx;
+  height: 100rpx;
+  display: block;
+}
+
+.list .li .r{
+  display: inline-block;
+}
+
+.list .li .title{
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 400rpx;
+}
+
+.list .li .spk{
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 470rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}

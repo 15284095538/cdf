@@ -1,0 +1,18 @@
+<view wx:for="{{adressList}}" wx:key="this" wx:for-index="index" wx:for-item="item" class="address" data-index='{{index}}'>
+
+  <view class='name'>{{item.name}}
+    <text style='margin:0 0 0 20rpx;'>{{item.tel}}</text>
+  </view>
+  <view class='addr'>{{item.area_text}}</view>
+  <view class='bot'>
+    <view class='default'>
+      <icon wx:if="{{ item.is_mr == 1 }}" class="icon" size="30rpx" type="success"></icon>
+    </view>
+    <view class='del' catchtap='delClick' data-id='{{item.id}}'>
+      <image src='/images/delpng.png'></image>删除</view>
+    <view catchtap='editClick' data-id='{{ item.id }}' class='edit'>
+      <image src='/images/edit.png'></image>编辑</view>
+  </view>
+</view>
+
+<view catchtap='addClick' class='sure'>新增收货地址</view>

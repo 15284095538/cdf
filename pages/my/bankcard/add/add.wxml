@@ -1,0 +1,22 @@
+
+<view class='inputInt'>
+  <view class='imgTxt'>银行：</view>
+  <picker mode='selector' bindchange="bindPickerChange" range-key="{{'name'}}" value="{{index}}" range="{{bankList}}">
+    <view class="picker">
+      {{bankName}}
+    </view>
+  </picker>
+</view>
+
+<view class='inputInt'>
+  <view class='imgTxt'>银行卡号：</view>
+  <input type='number' placeholder='请输入银行卡号' bindinput='bank_number' ></input>
+</view>
+
+<view class='inputInt'>
+  <view class='imgTxt'>收款人姓名：</view>
+  <input type='txt' placeholder='请输入收款人姓名' bindinput='name' ></input>
+</view>
+
+
+<view catchtap='sureClick' class='sure'>确认提交</view>

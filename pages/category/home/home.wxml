@@ -1,0 +1,21 @@
+<view class="category">
+  <view class='menu'>
+    <scroll-view scroll-y style="height:  {{ scrollHeight + 'px' }}">
+      <view catchtap='menuClick' data-id='{{ item.id }}' data-index='{{ index }}' class='li {{ menuindex === index ? "choice":"" }}' wx:for="{{ menuList }}" wx:key="this" wx:for-index="index" wx:for-item="item">{{ item.name }}</view>
+    </scroll-view>
+  </view>
+  <view class='ind-shopping'>
+    <scroll-view scroll-y bindscrolltolower="shoppingBottom" style="height:  {{ scrollHeight + 'px' }}">
+      <view class='li' catchtap='detailsClick' data-id='{{ item.id }}' wx:for="{{ goods }}" wx:key="this" wx:for-index="index" wx:for-item="item">
+        <view class='img'>
+          <image src='{{ item.img_url }}'></image>
+        </view>
+        <view class='h5'>{{ item.title }}</view>
+        <view class='price'>￥{{ item.price }}</view>
+        <view wx:if="{{ item.type === 2 }}" class='type'>
+          <image src='/images/Giftpackage.png'></image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+<view class='add'>
+  <view class='li'>
+    <view class='t'>收益人电话</view>
+    <input confirm-type="next" type="text" bindinput='tel' placeholder="11位手机号" />
+  </view>
+  <view class="li">
+    <view class='t'>验证码</view>
+    <input class="int" type='number' placeholder="请输入验证码" bindinput="code" />
+    <view catchtap='getcode' class="getcode">{{ codeTips }}</view>
+  </view>
+  <view class='li'>
+    <view class='t'>所在地址</view>
+    <view bindtap="selectDistrict" class='r'>{{areaInfo}}</view>
+  </view>
+  <view class='li'>
+    <view class='t'>详细地址</view>
+    <input confirm-type="done" type="text" bindinput='addree' placeholder="街道门牌信息" />
+  </view>
+  <view class='li'>
+    <view class='t'>收货人姓名</view>
+    <input confirm-type="next" type="text" bindinput='name' placeholder="请输入收货人姓名" />
+  </view>
+  <view class='li'>
+    <view class='t'>收货电话</view>
+    <input confirm-type="next" type="text" bindinput='address_tel' placeholder="请输入收货人电话" />
+  </view>
+</view>
+
+<view class="dialog-mask " style="z-index:11;visibility:{{addressMenuIsShow ? 'visible': 'hidden'}}" bindtap="hideCitySelected" />
+<!--城市三级联动-->
+<!--使用动画时不能wx:if="{{city.length>0&&isVisible}}" ，不能hidden=''属性否则无动画效果-->
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view style="height:10% ;width:95%;margin-top:10rpx">
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right" catchtap="citySure">确定</text>
+  </view>
+  <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+  <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" class="picker-item">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{areas}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+
+<view catchtap='addClick' class='sure'>确定</view>

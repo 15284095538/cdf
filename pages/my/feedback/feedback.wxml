@@ -1,0 +1,8 @@
+
+<view class="backTit">反馈详情</view>
+
+<view class='text'>
+  <textarea bindinput="textarea" placeholder="如果您有更详细的反馈，请告诉我们吧"/>
+</view>
+
+<view catchtap='sureClick' class='sure'>确认提交</view>

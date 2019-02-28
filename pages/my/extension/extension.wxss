@@ -1,0 +1,48 @@
+page{
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.list .li{
+  background-color: #fff;
+  width: 650rpx;
+  overflow: hidden;
+  padding: 20rpx;
+  margin: 20rpx auto 0;
+  border-radius: 30rpx;
+}
+
+.list .li .top{
+  height: 40rpx;
+  line-height: 40rpx;
+  display: flex;
+}
+
+.list .li .top .name{
+  width: 325rpx;
+  display: inline-block;
+}
+
+.list .li .top .tel{
+  flex: l;
+}
+
+.list .li text{
+  margin-left: 10rpx;
+  color: #663300;
+}
+
+.list .li .upgrade_time{
+  margin-top: 10rpx;
+}
+
+.list .li .share_user_integral{
+  margin-top: 10rpx;
+}
+
+.list .li .time{
+  text-align: right;
+  color: #a9a9a9;
+  font-size: 24rpx;
+}

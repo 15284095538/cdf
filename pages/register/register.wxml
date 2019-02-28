@@ -1,0 +1,24 @@
+<view class="logo">
+  <image src="/images/logo.jpg" mode=""></image>
+</view>
+<view class="Inputbox">
+  <input class="int" type='number' placeholder="请输入手机号码" bindinput="tel" />
+</view>
+<view class="Inputbox">
+  <input class="int" type='number' placeholder="请输入密码" bindinput="pas" />
+</view>
+<view class="Inputbox">
+  <input class="int" type='number' placeholder="请输入推荐码" value='{{share_id}}' bindinput="share_id" />
+</view>
+<view class="Inputbox">
+  <input class="int" type='number' value='{{code}}' placeholder="请输入验证码" bindinput="code" />
+  <view catchtap='getcode' class="getcode">{{ codeTips }}</view>
+</view>
+
+<radio-group class="radio-group" bindchange="radioChange">
+  <checkbox  value="0" color="#000" checked="{{ checkboxFalse }}" /><text catchtap="agreement">用户协议</text>
+</radio-group>
+
+<button class='button' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+  注册
+</button>

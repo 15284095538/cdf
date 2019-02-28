@@ -1,0 +1,157 @@
+page{
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 28rpx;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.inputInt{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+  background-color: #fff;
+  padding: 0 30rpx;
+  display: flex;
+  position: relative;
+}
+
+.inputInt .txt{
+  display: inline-block;
+  width: 200rpx;
+  margin-right: 20rpx;
+}
+
+.inputInt .addressTxt{
+  flex: 1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+
+.inputInt .arrow{
+  width: 10.4px;
+  height: 19.2px;
+  display: inline-block;
+  margin: 10rpx 0 0rpx 0;
+}
+
+.inputInt .arrow image{
+  width: 10.4px;
+  height: 19.2px;
+}
+
+
+.layer .address {
+  width: 690rpx;
+  margin: 30rpx auto 0;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.layer .address .name {
+  padding: 0 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 10rpx 0 0 0;
+}
+
+.layer .address .addr {
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #8c8c8c;
+  width: 630rpx;
+  margin: 0 auto;
+  padding-bottom: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.layer .address .bot {
+  height: 40rpx;
+  line-height: 40rpx;
+  width: 630rpx;
+  margin: 20rpx auto 0;
+}
+
+.layer .address .bot image {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  float: left;
+}
+
+.layer .address .bot .default {
+  float: left;
+}
+
+.layer .address .bot .del {
+  float: right;
+}
+
+.layer .address .bot .edit {
+  float: right;
+  margin-right: 20rpx;
+}
+
+.layer .address .bot .edit image {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 4rpx 10rpx 0 0;
+}
+
+
+.layer{
+  width: 750rpx;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+.layer .box{
+  position: absolute;
+  left: 0rpx;
+  bottom: 0;
+  padding: 10rpx 0;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+.layer .box .tit{
+  width: 690rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.scroll-view_H{
+  height: 280rpx;
+}
+
+.sure {
+  position: fixed;
+  left: 60rpx;
+  bottom: 40rpx;
+  z-index: 9;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  width: 630rpx;
+  background-color: #663300;
+}

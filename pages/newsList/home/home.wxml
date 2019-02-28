@@ -1,0 +1,13 @@
+<view class="newsList">
+  <view class='li' wx:for='{{newlist}}' catchtap='godetail' data-id='{{item.id}}'>
+    <view class='tit'><view class='spot' wx:if='{{ item.status == 1 }}'></view>{{item.title}}</view>
+    <view class='time'>{{item.create_time}}</view>
+  </view>
+</view>
+
+<view wx:if="{{ page == 1 && newlist == '' }}" class='no-data'>
+  <view class='img'>
+    <image src='/images/no.png'></image>
+  </view>
+  <view>暂无数据</view>
+</view>

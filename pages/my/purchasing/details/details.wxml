@@ -1,0 +1,66 @@
+<view class='list'>
+  <view class='li'>
+    <view class='line'>
+      <view class='l'>订单状态：</view>
+      <view class='r'>{{info.status_text}}</view>
+    </view>
+    <view class='line'>
+      <view class='l'>订单编号：</view>
+      <view class='r num'>{{info.number}}</view>
+    </view>
+    <view class='line' wx:if="{{ !item.pay_time == null }}" >
+      <view class='l'>支付时间：</view>
+      <view class='r num'>{{info.pay_time}}</view>
+    </view>
+    <view class='line' wx:if="{{ !item.deliver_time == null }}" >
+      <view class='l'>发货时间：</view>
+      <view class='r num'>{{info.deliver_time}}</view>
+    </view>
+    <view class='line' wx:if="{{ !item.take_time == null }}" >
+      <view class='l'>收货时间：</view>
+      <view class='r num'>{{info.take_time}}</view>
+    </view>
+    <view class='line' wx:if="{{ !item.accomplish_time == null }}" >
+      <view class='l'>完成时间：</view>
+      <view class='r num'>{{info.accomplish_time}}</view>
+    </view>
+    <view class='line' wx:if="{{ !item.logistics_company == null }}" >
+      <view class='l'>物流公司：</view>
+      <view class='r num'>{{info.logistics_company}}</view>
+    </view>
+    <view class='line' wx:if="{{ !item.logistics_number == null }}" >
+      <view class='l'>物流单号：</view>
+      <view class='r num'>{{info.logistics_number}}</view>
+    </view>
+    <view class='line' >
+      <view class='l'>收货人省市区：</view>
+      <view class='r num'>{{info.area}}</view>
+    </view>
+    <view class='line' >
+      <view class='l'>详细地址：</view>
+      <view class='r num'>{{info.address_text}}</view>
+    </view>
+    <view class='line' >
+      <view class='l'>收货人姓名：</view>
+      <view class='r num'>{{info.name}}</view>
+    </view>
+    <view class='line' >
+      <view class='l'>收货人电话：</view>
+      <view class='r num'>{{info.tel}}</view>
+    </view>
+    <view class='content'>
+      <view class='img'>
+        <image src='{{info.goods_img_url}}'></image>
+      </view>
+      <view class='title'>{{info.goods_title}}</view>
+      <view class='price'>{{info.price}}</view>
+    </view>
+
+    <!-- <view class='bot'>
+      <view catchtap='del' data-id='{{info.id}}' wx:if="{{ info.status == -10 }}" class='button close'>删除订单</view>
+      <view catchtap='cancel' data-id='{{info.id}}' wx:if="{{ info.status == 10 }}" class='button close'>取消订单</view>
+      <view catchtap='toPay' data-id='{{info.id}}' wx:if="{{ info.status == 10 }}" class='button'>待支付</view>
+      <view catchtap='take' data-id='{{info.id}}' wx:if="{{ info.status == 30 }}" class='button'>确认收货</view>
+    </view> -->
+  </view>
+</view>

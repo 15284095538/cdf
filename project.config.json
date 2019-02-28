@@ -1,0 +1,200 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"uglifyFileName": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.5.2",
+	"appid": "wxa28105df85bd9e37",
+	"projectname": "cdf",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/category/home/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/my/home/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "注册",
+					"pathName": "pages/register/register",
+					"query": "share_id=89",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "消息",
+					"pathName": "pages/newsList/home/home",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "商品列表",
+					"pathName": "pages/index/list/list",
+					"query": "id=1&name=保健品"
+				},
+				{
+					"id": 6,
+					"name": "商品详情",
+					"pathName": "pages/index/details/details",
+					"query": "id=3"
+				},
+				{
+					"id": -1,
+					"name": "收货地址",
+					"pathName": "pages/my/receivingaddress/home/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "意见反馈",
+					"pathName": "pages/my/feedback/feedback",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/my/about/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的推广",
+					"pathName": "pages/my/extension/extension",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "修改个人资料",
+					"pathName": "pages/my/editinfo/editinfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "修改密码",
+					"pathName": "pages/my/changpas/changpas",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "忘记密码",
+					"pathName": "pages/my/forgetpas/forgetpas",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "咨询",
+					"pathName": "pages/consulting/home/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "咨询列表",
+					"pathName": "pages/consulting/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 16,
+					"name": "咨询详情",
+					"pathName": "pages/consulting/details/details",
+					"query": "id=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "立即购买",
+					"pathName": "pages/pay-add/pay-add",
+					"query": "goods-id=31",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "代购",
+					"pathName": "pages/pay-dgadd/pay-dgadd",
+					"query": "goods-id=31",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单列表",
+					"pathName": "pages/my/order/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 20,
+					"name": "订单详情",
+					"pathName": "pages/my/order/details/details",
+					"query": "id=130",
+					"scene": null
+				},
+				{
+					"id": 21,
+					"name": "我的银行卡",
+					"pathName": "pages/my/bankcard/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加银行卡",
+					"pathName": "pages/my/bankcard/add/add",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 23,
+					"name": "提现记录",
+					"pathName": "pages/my/withdrawal/details",
+					"query": "id=4",
+					"scene": null
+				}
+			]
+		}
+	}
+}

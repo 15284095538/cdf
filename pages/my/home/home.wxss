@@ -1,0 +1,282 @@
+page{
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.button-hover {
+  background-color: rgba(0,0,0,0);
+  color: #333;
+}
+.other-button-hover {
+  background-color: rgba(0,0,0,0);
+}
+
+.info-top{
+  width: 750rpx;
+  height: 380rpx;
+  overflow: hidden;
+}
+
+.info-top .user{
+  height: 90rpx;
+  padding: 0 30rpx;
+  display: flex;
+  font-size: 0;
+  margin-top: 100rpx;
+}
+
+.info-top .user .img{
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  border: 1rpx solid #e9cca4;
+}
+
+.info-top .user .img image{
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.info-top .user .txt{
+  width: 300rpx;
+  height: 90rpx;
+  display: inline-block;
+  margin-left: 25rpx;
+  font-size: 28rpx;
+  line-height: 45rpx;
+}
+
+.info-top .user .button{
+  font-size: 24rpx;
+  width: 128rpx;
+  height: 43rpx;
+  border: 1rpx solid #333;
+  text-align: center;
+  line-height: 43rpx;
+  display: inline-block;
+  border-radius: 30rpx;
+  margin-top: 40rpx;
+}
+
+.info-top .user .button:last-child{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  width: 128rpx;
+  height: 43rpx;
+  border: 1rpx solid #333;
+  text-align: center;
+  line-height: 43rpx;
+  display: inline-block;
+  border-radius: 30rpx;
+}
+
+.info-top .money{
+  display: flex;
+  height: 110rpx;
+  overflow: hidden;
+  width: 750rpx;
+  margin-top: 50rpx;
+}
+
+.info-top .money .li{
+  flex: 1;
+  display: inline-block;
+  text-align: center;
+  font-size: 24rpx;
+  color: #663300;
+  margin: 0;
+  height: 110rpx;
+  line-height: 55rpx;
+}
+
+.info-top .money .li .bot{
+  font-size: 28rpx;
+}
+
+.extension{
+  width: 650rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 20rpx;
+  margin: 30rpx auto;
+  border-radius: 30rpx;
+  display: flex;
+}
+
+.extension .img{
+  width: 34rpx;
+  height: 34rpx;
+  display: inline-block;
+  margin-right: 20rpx;
+  margin-top: 25rpx;
+}
+
+.extension .img image{
+  width: 34rpx;
+  height: 34rpx;
+  display: block;
+}
+
+.extension .txt{
+  display: inline-block;
+  color: #7b5533;
+  font-size: 28rpx;
+  flex: 1;
+}
+
+.extension .arrow{
+  width: 10.4px;
+  height: 19.2px;
+  display: inline-block;
+  margin: 25rpx 0 0 0;
+}
+
+.extension .arrow image{
+  width: 10.4px;
+  height: 19.2px;
+  display: block;
+}
+
+.My-order{
+  background-color: #fff;
+  padding: 0 30rpx;
+  overflow: hidden;
+}
+
+.My-order .order-tit{
+  height: 84rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+  display: flex;
+  font-size: 0;
+  line-height: 84rpx;
+}
+
+.My-order .order-tit .txt{
+  flex: 1;
+  font-size: 28rpx;
+  display: inline-block;
+}
+
+.My-order .order-tit .img{
+  width: 13rpx;
+  height: 24rpx;
+  margin: 15rpx 0 0 0;
+}
+
+.My-order .order-tit .img image{
+  width: 13rpx;
+  height: 24rpx;
+}
+
+.My-order .link{
+  width: 750rpx;
+  margin-left: -30rpx;
+  height: 130rpx;
+  display: flex;
+  font-size: 0;
+}
+
+.My-order .link .li{
+  display: inline-block;
+  font-size: 24rpx;
+  flex: 1;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.My-order .link .li .img{
+  width: 45rpx;
+  height: 45rpx;
+  margin: 20rpx auto 15rpx;
+}
+
+.My-order .link .li .img image{
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.My-order .link .li .num{
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  position: absolute;
+  left: 80rpx;
+  top: 10rpx;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20rpx;
+  color: #fff;
+  background-color: #663300;
+}
+
+.my-service{
+  background-color: #fff;
+  margin: 20rpx 0 0 0;
+  padding: 0 30rpx;
+}
+
+.my-service .service-tit{
+  height: 84rpx;
+  line-height: 84rpx;
+  font-size: 28rpx;
+}
+
+.my-service .li{
+  width: 690rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-top: 1rpx solid #e0e0e0;
+  margin: 0 auto;
+  display: flex;
+  font-size: 0;
+}
+
+.my-service .li .img{
+  width: 45rpx;
+  height: 45rpx;
+  display: inline-block;
+  margin: 20rpx 20rpx 0 0;
+}
+
+.my-service .li .img image{
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.my-service .li .car image{
+  width: 35rpx;
+  height: 35rpx;
+  margin: 0 0 0 5rpx;
+}
+
+.my-service .li .txt{
+  flex: 1;
+  font-size: 24rpx;
+}
+
+.my-service .arrow{
+  width: 13px;
+  height: 24px;
+  display: inline-block;
+  margin: 20rpx 0 0 0;
+}
+
+.my-service .arrow image{
+  width: 13px;
+  height: 24px;
+}
+
+.YongJin{
+  position: relative;
+}
+
+.YongJin button{
+  position: absolute;
+  left: -19rpx;
+  top: -40rpx;
+  z-index: 9;
+  opacity: 0;
+}

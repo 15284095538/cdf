@@ -1,0 +1,79 @@
+.logo {
+  width: 290rpx;
+  height: 290rpx;
+  margin: 100rpx auto;
+}
+
+.logo image {
+  width: 290rpx;
+  height: 290rpx;
+  display: block;
+}
+
+.Inputbox {
+  width: 550rpx;
+  border-bottom: 1rpx solid #d8d8d8;
+  font-size: 26rpx;
+  padding-left: 40rpx;
+  margin: 10rpx auto 0;
+  position: relative;
+}
+
+.Inputbox .int {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.Inputbox .getcode {
+  position: absolute;
+  right: 0;
+  top: 20rpx;
+  height: 80upx;
+  font-size: 26upx;
+  color: #630;
+  z-index: 2;
+}
+
+.button {
+  width: 550rpx;
+  background-color: #630;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  margin: 100rpx auto 0;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.forget {
+  width: 590rpx;
+  margin: 20rpx auto 0;
+  text-align: right;
+  font-size: 26rpx;
+  color: #630;
+}
+
+.register {
+  width: 590rpx;
+  margin: 0rpx auto 0;
+  font-size: 26rpx;
+  color: #630;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.radio-group{
+  width: 750rpx;
+  text-align: center;
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #000066;
+  margin-top: 10rpx;
+}
+
+.radio-group checkbox{
+  margin-right: 10rpx;
+}

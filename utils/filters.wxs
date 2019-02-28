@@ -1,0 +1,20 @@
+var filters = {
+  toFix: function (value, divisor,size) {
+    var num = (parseInt(value) / divisor).toFixed(size);
+    return num
+  },
+  toWords:function( text, size){
+    if ( text.length > size ){
+      var text = text.substring(0, size) + '...';
+    }
+    return text
+  },
+  NumberJs:function(val){
+    return Number(val)
+  }
+}
+module.exports = {
+  toFix: filters.toFix,
+  toWords: filters.toWords,
+  NumberJs: filters.NumberJs,
+}

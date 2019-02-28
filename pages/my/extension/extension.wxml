@@ -1,0 +1,15 @@
+<view class="list">
+  <view wx:for="{{newlist}}" wx:key="this" wx:for-item="item" wx:for-index="index" class='li'>
+    <view class='top'>
+      <view class='name'>{{ item.name }}</view>
+      <view class='tel'>{{ item.tel }}</view>
+    </view>
+    <view class='upgrade_time'>第一次购买礼包时间：<text>{{ item.upgrade_time }}</text></view>
+    <view class='share_user_integral'>获得推荐他的奖励：<text>{{ item.share_user_integral }}</text></view>
+    <view class='time'>{{ item.create_time }}</view>
+  </view>
+  <view wx:if="{{ page == 1 && newlist == '' }}" class='no-data'>
+    <view class='img'><image src='/images/no.png'></image></view>
+    <view>暂无数据</view>
+  </view>
+</view>

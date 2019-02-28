@@ -1,0 +1,65 @@
+page{
+  background: rgb(245,245,245);
+}
+.box{
+  background: white;
+  width: 690rpx;
+  margin: 30rpx auto;
+  box-shadow: 0 0 20px 0 rgb(239, 239, 245);
+  padding-bottom: 70rpx;
+}
+.title{
+  background: rgb(251, 251, 251);
+  font-size: 28rpx;font-weight:bold;
+  height: 130rpx;padding: 30rpx 60rpx;box-sizing: border-box;
+  line-height: 50rpx;display: flex;justify-content: space-around;
+}
+.fill{
+  padding: 30rpx 60rpx;font-size: 28rpx;border-bottom:1px solid rgb(245,245,245);
+}
+.fill-title{
+  line-height: 60rpx;
+}
+.fill-money{
+  font-size: 54rpx;
+  font-weight: bold;
+  display: flex;justify-content: flex-start;
+}
+.fill-money input{
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 60rpx;
+}
+.balance{
+  padding: 0 60rpx;font-size: 28rpx;
+  line-height: 120rpx;
+}
+.balance text{
+  color: rgb(87, 106, 149);line-height: 120rpx;
+}
+.cashout{
+  width: 570rpx;
+  line-height: 80rpx;
+  background: rgb(80,169,55);color: white;
+  
+}
+
+.list .li{
+  padding: 30rpx;
+  background-color: #fff;
+  overflow: hidden;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+
+.list .li .l{
+  float: left;
+}
+
+.list .li .r{
+  float: right;
+}
+
+.list .li .close{
+  color: #663300;
+}

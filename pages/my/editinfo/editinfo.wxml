@@ -1,0 +1,15 @@
+
+<view class='inputInt'>
+  <view class='imgTxt'>头像</view>
+  <view catchtap='imgUp' class='img'>
+    <image src='{{ imgpath }}'></image>
+  </view>
+</view>
+
+<view class='inputInt'>
+  <view class='imgTxt'>昵称</view>
+  <input value='{{ nickname }}' bindinput='inputNc' ></input>
+</view>
+
+
+<view catchtap='sureClick' class='sure'>确认提交</view>

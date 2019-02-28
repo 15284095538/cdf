@@ -1,0 +1,90 @@
+page{
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.category{
+  display: flex;
+  border-top: 1rpx solid #e2e2e2;
+}
+
+.menu{
+  width: 170rpx;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+.menu .li{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+  border-left: 2rpx solid #fff;
+  background-color: #fff;
+}
+
+.menu .choice{
+  border-left: 2rpx solid #663300;
+}
+
+.ind-shopping{
+  display: inline-block;
+  width: 560rpx;
+  margin-top: -30rpx;
+}
+
+.ind-shopping .li{
+  width: 240rpx;
+  padding: 15rpx;
+  background-color: #fff;
+  display: inline-block;
+  margin: 30rpx 0 0 0;
+  font-size: 26rpx;
+  position: relative;
+}
+
+.ind-shopping .li .img{
+  width: 240rpx;
+  height: 160rpx;
+}
+
+.ind-shopping .li .img image{
+  width: 240rpx;
+  height: 160rpx;
+}
+
+.ind-shopping .li:nth-child(2n-1){
+  margin-right: 20rpx;
+}
+
+.ind-shopping .li .h5{
+  margin-top: 10rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.ind-shopping .li .price{
+  margin-top: 10rpx;
+  color: #ff6363;
+}
+
+.ind-shopping .li .type{
+  width: 46rpx;
+  height: 51rpx;
+  position: absolute;
+  left: 15rpx;
+  top: 15rpx;
+  z-index: 1;
+}
+
+.ind-shopping .li .type image{
+  width: 46rpx;
+  height: 51rpx;
+}

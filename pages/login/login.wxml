@@ -1,0 +1,14 @@
+<view class="logo">
+  <image src="/images/logo.jpg" mode=""></image>
+</view>
+<view class="Inputbox">
+  <input type="number" class="int" placeholder="请输入手机号码" bindinput="tel" />
+</view>
+<view class="Inputbox">
+  <input type="password" class="int" placeholder="请输入密码" bindinput="pas" />
+</view>
+<view catchtap='forget' class="forget">忘记密码？</view>
+<view catchtap='login' class="button">登录</view>
+<view catchtap='register' class="register">
+  还没有账号，去注册
+</view>

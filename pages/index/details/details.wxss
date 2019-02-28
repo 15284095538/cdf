@@ -1,0 +1,78 @@
+page{
+  background-color: #f5f5f5;
+}
+
+.ind-swiper{
+  width: 750rpx;
+  height: 530rpx;
+}
+.ind-swiper .slide-image{
+  width: 750rpx;
+  height: 530rpx;
+}
+
+.sp-info{
+  height: 150rpx;
+  padding: 0 30rpx;
+  background-color: #fff;
+  overflow: hidden;
+  font-size: 28rpx;
+}
+
+.sp-info .h5{
+  margin-top: 20rpx;
+}
+
+.sp-info .price{
+  margin-top: 20rpx;
+  color: #ff6363;
+}
+
+.details{
+  margin-top: 20rpx;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 100rpx;
+}
+
+.layerPlay{
+  width: 750rpx;
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+  display: flex;
+  font-size: 0;
+  background-color: #fff;
+}
+
+.layerPlay .consultation{
+  width: 150rpx;
+  height: 100rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 24rpx;
+  color: #aaaaaa;
+}
+
+.layerPlay .consultation .img{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 10rpx auto 3rpx;
+}
+
+.layerPlay .consultation image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.layerPlay .pay{
+  flex: 1;
+  display: inline-block;
+  font-size: 28rpx;
+  color: #fff;
+  background-color: #663300;
+  text-align: center;
+  line-height: 100rpx;
+}

@@ -1,0 +1,32 @@
+<view class="list-top">
+  <view catchtap='topClick' data-index='0' class='li {{ topIndex == 0 ? "select":"" }}'>{{ name }}</view>
+  <view catchtap='topClick' data-index='1' class='li {{ topIndex == 1 ? "select":"" }}'>销量</view>
+  <view catchtap='topClick' data-index='2' class='li {{ topIndex == 2 ? "select":"" }}'>浏览量</view>
+</view>
+
+<view class='layer' wx:if="{{ layerDisPlay }}" catchtap='layerDisPlay'>
+  <scroll-view class="scroll-view_H" scroll-y>
+    <view class='li' catchtap='menuClick' data-name='{{ item.name }}' data-id='{{ item.id }}' wx:for="{{menuList}}" wx:key="this" wx:for-index="index" wx:for-item="item">{{ item.name }}</view>
+  </scroll-view>
+</view>
+
+<view class='ind-shopping'>
+  <view class='li' catchtap='detailsClick' data-id='{{ item.id }}' wx:for="{{ shopList }}" wx:key="this" wx:for-index="index" wx:for-item="item" >
+    <view class='img'>
+      <image src='{{ item.img_url }}'></image>
+    </view>
+    <view class='h5'>{{ item.title }}</view>
+    <view class='price'>￥{{ item.price }}</view>
+    <view wx:if="{{ item.type === 1 }}" class='type'>
+      <image src='/images/Giftpackage.png'></image>
+    </view>
+  </view>
+</view>
+
+
+<view wx:if="{{ page == 1 && shopList == '' }}" class='no-data'>
+  <view class='img'>
+    <image src='/images/no.png'></image>
+  </view>
+  <view>暂无数据</view>
+</view>

@@ -1,0 +1,27 @@
+<view class='box'>
+  <view class='title'>
+    <view>提现到</view>
+    <picker mode='selector' bindchange="bindPickerChange" range-key="{{'bank_number'}}" value="{{index}}" range="{{bankList}}">
+      <view class="picker">
+        {{bankName}}
+      </view>
+    </picker>
+  </view>
+  <view class='fill'>
+    <view class='fill-title'>提现金额</view>
+    <view class='fill-money'>￥
+      <input type='digit' bindinput='bindinput' value='{{money}}'></input>
+    </view>
+  </view>
+  <view class='balance'>账户余额￥{{cash}}，
+    <text catchtap='all'>全部提现</text>
+  </view>
+  <button catchtap='cashout' class='cashout' disabled='{{disabled}}'>提现</button>
+</view>
+
+<view class='list'>
+  <view catchtap='details' data-id='{{item.id}}' wx:for="{{ newlist }}" wx:key="this" wx:for-index="index" wx:for-item="item" class='li'>
+    <view class='l'>现金额：{{item.money}}分</view>
+    <view class='r {{item.status == -10 ? "close":""}}'>{{tem.status_text}}</view>
+  </view>
+</view>

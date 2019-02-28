@@ -1,0 +1,44 @@
+<view class='list'>
+  <view class='li'>
+    <view class='line'>
+      <view class='l'>提现状态：</view>
+      <view class='r {{info.status != -10 ? "num":""}}'>{{info.status_text}}</view>
+    </view>
+    <view class='line'>
+      <view class='l'>提取积分：</view>
+      <view class='r num'>{{info.integral}}</view>
+    </view>
+    <view class='line'>
+      <view class='l'>实际提取积分：</view>
+      <view class='r num'>{{info.money}}</view>
+    </view>
+    <view class='line'>
+      <view class='l'>综合管理费：</view>
+      <view class='r num'>{{info.management_integral}}</view>
+    </view>
+    <view class='line'>
+      <view class='l'>银行名称：</view>
+      <view class='r num'>{{info.bank_type_text}}</view>
+    </view>
+    <view class='line'>
+      <view class='l'>收款人：</view>
+      <view class='r num'>{{info.payee}}</view>
+    </view>
+    <view class='line'>
+      <view class='l'>收款账户：</view>
+      <view class='r num'>{{info.bank_account}}</view>
+    </view>
+    <view class='line'>
+      <view class='l'>审核时间：</view>
+      <view class='r num'>{{info.audit_time}}</view>
+    </view>
+    <view class='line'>
+      <view class='l'>审核说明：</view>
+      <view class='r num'>{{info.audit_spk}}</view>
+    </view>
+    <view class='line'>
+      <view class='l'>提交时间：</view>
+      <view class='r num'>{{info.create_time}}</view>
+    </view>
+  </view>
+</view>

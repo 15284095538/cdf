@@ -1,0 +1,19 @@
+
+<view class="list">
+  <view catchtap='details' data-id='{{ item.id }}' wx:for="{{goods}}" wx:key="this" wx:for-index="index" wx:for-item="item" class="li">
+    <view class='img'>
+      <image src='{{item.img_url}}'></image>
+    </view>
+    <view class='r'>
+      <view class='title'>{{item.title}}</view>
+      <view class='spk'>{{item.spk}}</view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{ page == 1 || goods == '' }}" class='no-data'>
+  <view class='img'>
+    <image src='/images/no.png'></image>
+  </view>
+  <view>暂无数据</view>
+</view>

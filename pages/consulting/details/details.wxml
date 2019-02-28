@@ -1,0 +1,13 @@
+
+<view class='ind-swiper'>
+  <image src="{{item.img_url}}" class="slide-image" />
+</view>
+
+<view class='tit'>{{ info.title }}</view>
+
+<view class='spk'>{{ info.spk }}</view>
+
+<view class='introduce'>
+  <import src="../../../wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>

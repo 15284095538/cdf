@@ -1,0 +1,100 @@
+<view class="info-top MyInfo-background">
+  <view class='user'>
+    <view catchtap='editinfo' class='img'>
+      <image src='{{ userinfoData.head_img_url }}'></image>
+    </view>
+    <view catchtap='editinfo' class='txt'>
+      <view class='name'>{{ userinfoData.nickname }}</view>
+      <view class='code'>推广码：{{ userinfoData.code }}</view>
+    </view>
+    <view class='button YongJin'>
+      赚取佣金
+      <button class='button' value="赚取佣金" open-type='share'></button>
+    </view>
+    <view catchtap='withdrawal' class='button'>申请提现</view>
+  </view>
+  <view class='money'>
+    <view class='li'>
+      <view class='top'>可提现金额</view>
+      <view class='bot'>{{ userinfoData.may_withdraw_integral }}积分</view>
+    </view>
+    <view class='li'>
+      <view class='top'>今日收益</view>
+      <view class='bot'>{{ userinfoData.day_sy_integral }}积分</view>
+    </view>
+    <view class='li'>
+      <view class='top'>累计收入</view>
+      <view class='bot'>{{ userinfoData.share_integral }}积分</view>
+    </view>
+  </view>
+</view>
+
+<view catchtap='extension' class='extension MyInfo-extension'>
+  <view class='img'><image src='/images/extension.png'></image></view>
+  <view class='txt'>我的推广</view>
+  <view class='arrow'><image src='/images/arrow1.png'></image></view>
+</view>
+
+<view class='My-order'>
+  <view class='order-tit'>
+    <view class='txt'>我的订单</view>
+    <view class='img'><image src='/images/arrow2.png'></image></view>
+  </view>
+  <view class='link'>
+    <view catchtap='order' data-index='0' data-status='' class='li'>
+      <view class='img'><image src='/images/order1.png'></image></view>
+      <view class='txt'>全部</view>
+    </view>
+    <view catchtap='order' data-index='1' data-status='10' class='li'>
+      <view class='img'><image src='/images/order2.png'></image></view>
+      <view class='txt'>待付款</view>
+    </view>
+    <view catchtap='order' data-index='2' data-status='20' class='li'>
+      <view class='img'><image src='/images/order3.png'></image></view>
+      <view class='txt'>待发货</view>
+    </view>
+    <view catchtap='order' data-index='3' data-status='30' class='li'>
+      <view class='img'><image src='/images/order4.png'></image></view>
+      <view class='txt'>待收货</view>
+      <!-- <view class='num'>15</view> -->
+    </view>
+    <view catchtap='order' data-index='4' data-status='40' class='li'>
+      <view class='img'><image src='/images/order5.png'></image></view>
+      <view class='txt'>已完成</view>
+    </view>
+  </view>
+</view>
+
+<view class='my-service'>
+  <view class='service-tit'>我的服务</view>
+  <view catchtap='serviceClick' data-link='/pages/my/receivingaddress/home/home' class='li'>
+    <view class='img'><image src='/images/service1.png'></image></view>
+    <view class='txt'>我的地址</view>
+    <view class='arrow'><image src='/images/arrow2.png'></image></view>
+  </view>
+  <view catchtap='serviceClick' data-link='/pages/my/bankcard/home/home' class='li'>
+    <view class='img car'><image src='/images/car.png' ></image></view>
+    <view class='txt'>我的银行卡</view>
+    <view class='arrow'><image src='/images/arrow2.png'></image></view>
+  </view>
+  <view catchtap='serviceClick' data-link='/pages/my/purchasing/home/home' class='li'>
+    <view class='img car'><image src='/images/dg.png' ></image></view>
+    <view class='txt'>我的代购订单</view>
+    <view class='arrow'><image src='/images/arrow2.png'></image></view>
+  </view>
+  <view catchtap='serviceClick' data-link='/pages/my/feedback/feedback' class='li'>
+    <view class='img'><image src='/images/service2.png'></image></view>
+    <view class='txt'>意见反馈</view>
+    <view class='arrow'><image src='/images/arrow2.png'></image></view>
+  </view>
+  <view catchtap='serviceClick' data-link='/pages/my/about/about' class='li'>
+    <view class='img'><image src='/images/service3.png'></image></view>
+    <view class='txt'>关于我们</view>
+    <view class='arrow'><image src='/images/arrow2.png'></image></view>
+  </view>
+  <view catchtap='customerservice' class='li'>
+    <view class='img'><image src='/images/service4.png'></image></view>
+    <view class='txt'>客服服务</view>
+    <view class='arrow'><image src='/images/arrow2.png'></image></view>
+  </view>
+</view>
