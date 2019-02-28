@@ -119,10 +119,10 @@ Page({
           signType: res.payInfo.signType,
           paySign: res.payInfo.paySign,
           success(res) {
-
+            that.getdataTab()
           },
           fail(res) {
-
+            that.getdataTab()
           }
         })
       });

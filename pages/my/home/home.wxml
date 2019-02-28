@@ -23,8 +23,8 @@
       <view class='bot'>{{ userinfoData.day_sy_integral }}积分</view>
     </view>
     <view class='li'>
-      <view class='top'>累计收入</view>
-      <view class='bot'>{{ userinfoData.share_integral }}积分</view>
+      <view class='top'>账户余额</view>
+      <view class='bot'>{{ userinfoData.total_integral }}积分</view>
     </view>
   </view>
 </view>
@@ -95,6 +95,11 @@
   <view catchtap='customerservice' class='li'>
     <view class='img'><image src='/images/service4.png'></image></view>
     <view class='txt'>客服服务</view>
+    <view class='arrow'><image src='/images/arrow2.png'></image></view>
+  </view>
+  <view catchtap='clerLogin' class='li'>
+    <view class='img car'><image src='/images/tuic.png' ></image></view>
+    <view class='txt'>退出登录</view>
     <view class='arrow'><image src='/images/arrow2.png'></image></view>
   </view>
 </view>

@@ -86,12 +86,20 @@ Page({
       })
       return false;
     }
+    if (!this.data.bank_type ){
+      wx.showToast({
+        title: '请选择提现银行',
+        icon: 'none'
+      })
+      return false;
+    }
     if (Number(this.data.money) > 0) {
-      util.UserHttpRequst(false, 'user/userWithdrawals', {
+      util.UserHttpRequst(false, 'withdraw/add', {
         integral: this.data.money,
         bank_id: this.data.bank_type
       },
         'POST', res => {
+          const message = res.message
           setTimeout(res=>{
             wx.showToast({
               title: message,

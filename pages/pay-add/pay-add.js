@@ -22,17 +22,41 @@ Page({
       address_id: this.data.address_id
     },
       'POST', res => {
+        console.log(res.data)
         wx.requestPayment({ //微信支付
-          timeStamp: res.payInfo.timestamp,
-          nonceStr: res.payInfo.nonceStr,
-          package: res.payInfo.package,
-          signType: res.payInfo.signType,
-          paySign: res.payInfo.paySign,
+          timeStamp: res.data.payInfo.timestamp,
+          nonceStr: res.data.payInfo.nonceStr,
+          package: res.data.payInfo.package,
+          signType: res.data.payInfo.signType,
+          paySign: res.data.payInfo.paySign,
           success(res) {
-
+            console.log(res)
+            wx.showToast({
+              title: '支付成功',
+              icon: 'none',
+              duration: 1000,
+              success(res){
+                setTimeout(res => {
+                  wx.switchTab({
+                    url: '/pages/my/home/home',
+                  })
+                }, 1000)
+              }
+            })
           },
           fail(res) {
-
+            wx.showToast({
+              title: '支付失败',
+              icon: 'none',
+              duration: 1000,
+              success() {
+                setTimeout(res => {
+                  wx.switchTab({
+                    url: '/pages/my/home/home',
+                  })
+                }, 1000)
+              }
+            })
           }
         })
       });

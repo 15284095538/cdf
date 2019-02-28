@@ -19,15 +19,23 @@ Page({
       userinfoData: wx.getStorageSync('userInfo-login')
     })
   },
-  onShareAppMessages
-  (e){ //分享
-    if (e.from === 'button') {
-      // 来自页面内转发按钮
-      //console.log(e.target)
-    }
+  clerLogin(e){ //退出登录
+    wx.showModal({
+      title: '提示',
+      content: '确定退出登录',
+      success(res) {
+        if (res.confirm) {
+          wx.clearStorage()
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+  onShareAppMessage(res){ //分享
     return {
       title: '分享赚取佣金',
-      imageUrl: 'https://demo.jixinghai.com/chaduofen/public/upload/20190215/04a54dffd9d6bd08cb703deae51a387d.png',
+      imageUrl: '/images/logo.jpg',
       path: '/pages/register/register?share_id=' + this.data.userinfoData.code
     }
   },

@@ -41,6 +41,20 @@ function UserHttpRequst(loading, url, params, method, callBack) {// 用户token 
       }
       //console.log(res.data);
       callBack(res.data);
+      if (res.data.status == 440 ){
+        wx.showToast({
+          title: '登录失效，请重新登录',
+          icon: 'none',
+          duration: 1000,
+          success(res){
+            setTimeout(res=>{
+              wx.redirectTo({
+                url: '/pages/login/login',
+              })
+            },1000)
+          }
+        })
+      }
     },
     complete: function () {
       if (loading == true) {

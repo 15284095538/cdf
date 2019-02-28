@@ -74,10 +74,10 @@ Page({
           signType: res.payInfo.signType,
           paySign: res.payInfo.paySign,
           success(res) {
-
+            that.getdata()
           },
           fail(res) {
-
+            that.getdata()
           }
         })
       });

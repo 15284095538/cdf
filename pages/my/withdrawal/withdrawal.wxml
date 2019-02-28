@@ -22,6 +22,6 @@
 <view class='list'>
   <view catchtap='details' data-id='{{item.id}}' wx:for="{{ newlist }}" wx:key="this" wx:for-index="index" wx:for-item="item" class='li'>
     <view class='l'>现金额：{{item.money}}分</view>
-    <view class='r {{item.status == -10 ? "close":""}}'>{{tem.status_text}}</view>
+    <view class='r {{item.status == -10 ? "close":""}}'>{{item.status_text}}</view>
   </view>
 </view>

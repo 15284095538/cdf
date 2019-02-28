@@ -290,10 +290,32 @@ Page({
           signType: res.payInfo.signType,
           paySign: res.payInfo.paySign,
           success(res) {
-
+            wx.showToast({
+              title: '支付成功',
+              icon: 'none',
+              duration: 1000,
+              success() {
+                setTimeout(res => {
+                  wx.switchTab({
+                    url: '/pages/my/home/home',
+                  })
+                }, 1000)
+              }
+            })
           },
           fail(res) {
-
+            wx.showToast({
+              title: '支付失败',
+              icon: 'none',
+              duration: 1000,
+              success() {
+                setTimeout(res => {
+                  wx.switchTab({
+                    url: '/pages/my/home/home',
+                  })
+                }, 1000)
+              }
+            })
           }
         })
       });
