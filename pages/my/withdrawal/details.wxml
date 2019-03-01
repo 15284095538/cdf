@@ -28,11 +28,11 @@
       <view class='l'>收款账户：</view>
       <view class='r num'>{{info.bank_account}}</view>
     </view>
-    <view class='line'>
+    <view wx:if="{{ info.audit_time }}" class='line'>
       <view class='l'>审核时间：</view>
       <view class='r num'>{{info.audit_time}}</view>
     </view>
-    <view class='line'>
+    <view wx:if="{{ info.audit_spk }}" class='line'>
       <view class='l'>审核说明：</view>
       <view class='r num'>{{info.audit_spk}}</view>
     </view>

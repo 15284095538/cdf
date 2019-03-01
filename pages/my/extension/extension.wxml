@@ -1,7 +1,7 @@
 <view class="list">
   <view wx:for="{{newlist}}" wx:key="this" wx:for-item="item" wx:for-index="index" class='li'>
     <view class='top'>
-      <view class='name'>{{ item.name }}</view>
+      <view wx:if="{{item.name}}" class='name'>{{ item.name }}</view>
       <view class='tel'>{{ item.tel }}</view>
     </view>
     <view class='upgrade_time'>第一次购买礼包时间：<text>{{ item.upgrade_time }}</text></view>

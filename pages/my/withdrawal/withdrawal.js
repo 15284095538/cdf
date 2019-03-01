@@ -73,6 +73,7 @@ Page({
     }
   },
   cashout(e) {
+    const that = this
     if (Number(this.data.money) == 0) {
       wx.showToast({
         title: '请输入正确提款金额',
@@ -106,6 +107,7 @@ Page({
               icon: 'none',
               duration: 1000
             })
+            that.getlist();
           },500)
         });
     }

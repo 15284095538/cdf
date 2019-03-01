@@ -30,17 +30,16 @@ Page({
           signType: res.data.payInfo.signType,
           paySign: res.data.payInfo.paySign,
           success(res) {
-            console.log(res)
             wx.showToast({
               title: '支付成功',
               icon: 'none',
               duration: 1000,
-              success(res){
+              success(res) {
                 setTimeout(res => {
                   wx.switchTab({
                     url: '/pages/my/home/home',
                   })
-                }, 1000)
+                }, 2000)
               }
             })
           },
@@ -54,7 +53,7 @@ Page({
                   wx.switchTab({
                     url: '/pages/my/home/home',
                   })
-                }, 1000)
+                }, 2000)
               }
             })
           }

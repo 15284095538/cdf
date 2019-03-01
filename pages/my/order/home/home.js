@@ -113,11 +113,11 @@ Page({
       },
       'POST', res => {
         wx.requestPayment({ //微信支付
-          timeStamp: res.payInfo.timestamp,
-          nonceStr: res.payInfo.nonceStr,
-          package: res.payInfo.package,
-          signType: res.payInfo.signType,
-          paySign: res.payInfo.paySign,
+          timeStamp: res.data.payInfo.timestamp,
+          nonceStr: res.data.payInfo.nonceStr,
+          package: res.data.payInfo.package,
+          signType: res.data.payInfo.signType,
+          paySign: res.data.payInfo.paySign,
           success(res) {
             that.getdataTab()
           },
