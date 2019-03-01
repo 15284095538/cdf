@@ -11,7 +11,7 @@
   </view>
 </view>
 
-<view wx:if="{{ page == 1 || goods == '' }}" class='no-data'>
+<view wx:if="{{ page == 1 && goods == '' }}" class='no-data'>
   <view class='img'>
     <image src='/images/no.png'></image>
   </view>

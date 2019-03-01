@@ -36,7 +36,7 @@
 </view>
 
 <view class='My-order'>
-  <view class='order-tit'>
+  <view catchtap='order' data-index='0' data-status='' class='order-tit'>
     <view class='txt'>我的订单</view>
     <view class='img'><image src='/images/arrow2.png'></image></view>
   </view>
