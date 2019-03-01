@@ -15,7 +15,7 @@ const formatNumber = n => {
 }
 
 
-const publickbaseUrl = "https://demo.jixinghai.com/chaduofen/public/index.php";//公告测试环境
+const publickbaseUrl = "https://demo.jixinghai.com/chaduofen/public/index.php/";//公告测试环境
 
 const baseUrl = "https://demo.jixinghai.com/chaduofen/public/index.php/api/";//测试环境
 

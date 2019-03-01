@@ -62,7 +62,9 @@ Page({
           duration: 1000
         })
         setTimeout(res => {
-          wx.navigateBack()
+          wx.redirectTo({
+            url: '/pages/login/login',
+          })
         }, 1000)
       });
   },

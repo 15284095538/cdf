@@ -3,7 +3,7 @@ const util = require("../../../utils/util.js");
 Page({
   data: {
     tel: '',
-    code: '',
+    code: '999999',
     password: '',
     codeTips: '获取验证码',
 

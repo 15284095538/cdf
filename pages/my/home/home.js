@@ -20,12 +20,14 @@ Page({
     })
   },
   clerLogin(e){ //退出登录
+    const that = this
     wx.showModal({
       title: '提示',
       content: '确定退出登录',
       success(res) {
         if (res.confirm) {
           wx.clearStorage()
+          that.onShow()
         } else if (res.cancel) {
           console.log('用户点击取消')
         }

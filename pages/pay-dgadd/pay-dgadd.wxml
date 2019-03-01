@@ -5,7 +5,7 @@
   </view>
   <view class="li">
     <view class='t'>验证码</view>
-    <input class="int" type='number' placeholder="请输入验证码" bindinput="code" />
+    <input class="int" type='number' value='{{code}}' placeholder="请输入验证码" bindinput="code" />
     <view catchtap='getcode' class="getcode">{{ codeTips }}</view>
   </view>
   <view class='li'>

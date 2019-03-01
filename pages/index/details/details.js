@@ -41,20 +41,23 @@ Page({
       })
       return false
     }
-    if (!this.data.canbuy.Isf){ //判断是否可以购买
-      wx.showToast({
-        title: this.data.canbuy.txt,
-        icon: 'none',
-        duration: 1000
-      })
-      return false
-    }
+    
 
     wx.showActionSheet({
       itemList: ['立即购买', '代购'],
       success(res) {
         const index = res.tapIndex
         if( index == 0 ){ //立即购买
+
+          if (!that.data.canbuy.Isf) { //判断是否可以购买
+            wx.showToast({
+              title: that.data.canbuy.txt,
+              icon: 'none',
+              duration: 1000
+            })
+            return false
+          }
+
           wx.navigateTo({
             url: '/pages/pay-add/pay-add?goods-id=' + that.data.id,
           })

@@ -6,7 +6,7 @@
 
 <view class='inputInt'>
   <view class='imgTxt'>验证码：</view>
-  <input type='password' placeholder='请输入验证码' class='code' bindinput='code' ></input>
+  <input type='number' placeholder='请输入验证码' class='code' value='{{code}}' bindinput='code' ></input>
   <view catchtap='getcode' class="getcode">{{ codeTips }}</view>
 </view>
 
