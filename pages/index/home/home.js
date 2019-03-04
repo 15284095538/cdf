@@ -54,5 +54,11 @@ Page({
         goods: res.data
       })
     });
+    util.HttpRequst(true, 'index/dayCanBuyNum', {},//今日还可购买数量说明
+      'GET', res => {
+        that.setData({
+          dayCanBuyNum: res.data
+        })
+      });
   }
 })

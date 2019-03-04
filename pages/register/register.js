@@ -20,6 +20,11 @@ Page({
       share_id: e.share_id
     })
   },
+  register(e){
+    wx.redirectTo({
+      url: '/pages/login/login',
+    })
+  },
   radioChange(e) {
     this.data.checkboxFalse = !this.data.checkboxFalse
   },

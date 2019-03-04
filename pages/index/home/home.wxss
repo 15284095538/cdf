@@ -151,3 +151,33 @@ page{
   width: 46rpx;
   height: 51rpx;
 }
+
+.ind-newsLst{
+  margin: 0;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-bottom: 10rpx;
+}
+
+.ind-newsLst .li {
+  height:60rpx;
+  line-height:60rpx;
+  color: #663300;
+}
+
+.ind-newsLst .ul{
+  height: 60rpx;
+}
+
+.ind-newsLst .img{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0rpx;
+}
+
+.ind-newsLst .img image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: -10rpx 0 0 10rpx;
+  vertical-align: middle;
+}

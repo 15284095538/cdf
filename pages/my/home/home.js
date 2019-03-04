@@ -73,20 +73,21 @@ Page({
     'GET', ress => {
       if (ress.status == 200) {
         wx.showActionSheet({
-          itemList: ['拨打电话', 'QQ'],
+          itemList: ['QQ'],
           success(res) {
             //console.log(res.tapIndex)
-            if (res.tapIndex == 0 ){
-              wx.makePhoneCall({
-                phoneNumber: ress.data.mobile
-              })
-            }else{
-              wx.showModal({
-                title: 'QQ',
-                content: ress.data.qq,
-                success(res) {}
-              })
-            }
+            // if (res.tapIndex == 0 ){
+            //   wx.makePhoneCall({
+            //     phoneNumber: ress.data.mobile
+            //   })
+            // }else{
+              
+            // }
+            wx.showModal({
+              title: 'QQ',
+              content: ress.data.qq,
+              success(res) { }
+            })
           },
         })
       }

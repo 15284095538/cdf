@@ -31,6 +31,13 @@ Page({
     })
 
   },
+  IsBlank(e){
+    if (this.data.bankList == '' ){
+      wx.navigateTo({
+        url: '/pages/my/bankcard/add/add',
+      })
+    }
+  },
   onReachBottom(e) {
     if (this.data.pagemore) {
       this.data.page++
@@ -57,11 +64,17 @@ Page({
         that.setData({
           bankList: res.data
         })
-        if( res.data == '' ){
-          wx.navigateTo({
-            url: '/pages/my/bankcard/add/add',
-          })
-        }
+        // if( res.data == '' ){
+        //   wx.navigateTo({
+        //     url: '/pages/my/bankcard/add/add',
+        //   })
+        // }
+      });
+    util.UserHttpRequst(true, 'withdraw/managementSpk', {},
+      'GET', res => {
+        that.setData({
+          managementSpk: res.data
+        })
       });
   },
   bindinput(e) {
@@ -107,7 +120,10 @@ Page({
               icon: 'none',
               duration: 1000
             })
-            that.getlist();
+            setTimeout(res=>{
+              that.data.newlist = []
+              that.getlist();
+            },1000)
           },500)
         });
     }

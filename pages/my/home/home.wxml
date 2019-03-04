@@ -5,33 +5,33 @@
     </view>
     <view catchtap='editinfo' class='txt'>
       <view class='name'>{{ userinfoData.nickname }}</view>
-      <view class='code'>推广码：{{ userinfoData.code }}</view>
+      <view class='code'>分享码：{{ userinfoData.code }}</view>
     </view>
     <view class='button YongJin'>
-      赚取佣金
+      赚取代金券
       <button class='button' value="赚取佣金" open-type='share'></button>
     </view>
-    <view catchtap='withdrawal' class='button'>申请提现</view>
+    <view catchtap='withdrawal' class='button'>申请兑换</view>
   </view>
   <view class='money'>
     <view class='li'>
-      <view class='top'>可提现金额</view>
-      <view class='bot'>{{ userinfoData.may_withdraw_integral }}积分</view>
+      <view class='top'>可兑换代金券</view>
+      <view class='bot'>{{ userinfoData.may_withdraw_integral }}代金券</view>
     </view>
     <view class='li'>
-      <view class='top'>今日收益</view>
-      <view class='bot'>{{ userinfoData.day_sy_integral }}积分</view>
+      <view class='top'>今日收获</view>
+      <view class='bot'>{{ userinfoData.day_sy_integral }}代金券</view>
     </view>
     <view class='li'>
-      <view class='top'>账户余额</view>
-      <view class='bot'>{{ userinfoData.total_integral }}积分</view>
+      <view class='top'>我的业绩</view>
+      <view class='bot'>{{ userinfoData.total_integral }}代金券</view>
     </view>
   </view>
 </view>
 
 <view catchtap='extension' class='extension MyInfo-extension'>
   <view class='img'><image src='/images/extension.png'></image></view>
-  <view class='txt'>我的推广</view>
+  <view class='txt'>我的分享</view>
   <view class='arrow'><image src='/images/arrow1.png'></image></view>
 </view>
 

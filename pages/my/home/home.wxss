@@ -50,7 +50,7 @@ page{
 
 .info-top .user .button{
   font-size: 24rpx;
-  width: 128rpx;
+  width: 148rpx;
   height: 43rpx;
   border: 1rpx solid #333;
   text-align: center;

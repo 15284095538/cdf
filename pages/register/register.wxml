@@ -19,6 +19,12 @@
   <checkbox  value="0" color="#000" checked="{{ checkboxFalse }}" /><text catchtap="agreement">用户协议</text>
 </radio-group>
 
+
+
 <button class='button' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
   注册
 </button>
+
+<view catchtap='register' class="register">
+  已有账户去登陆的点击
+</view>

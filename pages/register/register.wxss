@@ -41,7 +41,7 @@
   line-height: 80rpx;
   text-align: center;
   border-radius: 30rpx;
-  margin: 100rpx auto 0;
+  margin: 60rpx auto 0;
   color: #fff;
   font-size: 28rpx;
 }
@@ -56,10 +56,10 @@
 
 .register {
   width: 590rpx;
-  margin: 0rpx auto 0;
+  margin: 20rpx auto 0;
   font-size: 26rpx;
   color: #630;
-  text-align: center;
+  text-align: right;
   position: relative;
   z-index: 2;
 }

@@ -25,6 +25,14 @@
     </swiper>
   </view>
 </view>
+<view class='ind-news ind-newsLst'>
+  <view class='img'>
+    <image src='/images/ts.png'></image>
+  </view>
+  <view class='ul'>
+    <view class='li'>{{dayCanBuyNum.spk}}</view>
+  </view>
+</view>
 
 <view class='ind-title'>
   <text class='fl'>热卖商品</text>

@@ -1,22 +1,38 @@
 <view class='box'>
   <view class='title'>
-    <view>提现到</view>
-    <picker mode='selector' bindchange="bindPickerChange" range-key="{{'bank_number'}}" value="{{index}}" range="{{bankList}}">
+    <view>兑换到</view>
+    <view wx:if="{{ bankList == '' }}" catchtap='IsBlank' >{{bankName}}</view>
+    <picker wx:if="{{ bankList != '' }}" mode='selector' bindchange="bindPickerChange" range-key="{{'bank_number'}}" value="{{index}}" range="{{bankList}}">
       <view class="picker">
         {{bankName}}
       </view>
     </picker>
   </view>
   <view class='fill'>
-    <view class='fill-title'>提现金额</view>
+    <view class='fill-title'>兑换额度</view>
     <view class='fill-money'>￥
-      <input type='digit' bindinput='bindinput' value='{{money}}'></input>
+      <input type='digit' disabled="true" bindinput='bindinput' value='{{money}}'></input>
     </view>
   </view>
-  <view class='balance'>账户余额￥{{cash}}，
-    <text catchtap='all'>全部提现</text>
+  <view class='balance'>我的业绩￥{{cash}}，
+    <text catchtap='all'>全部兑换</text>
   </view>
-  <button catchtap='cashout' class='cashout' disabled='{{disabled}}'>提现</button>
+  <button catchtap='cashout' class='cashout' disabled='{{disabled}}'>兑换</button>
+
+  <view class='Tx_money'>
+    <view class='t'>
+      <text class='fl'>扣除说明</text>
+      <text class='fr'>{{ managementSpk.spk }}</text>
+    </view>
+    <view class='t'>
+      <text class='fl'>扣除百分比</text>
+      <text class='fr'>{{ managementSpk.value }}</text>
+    </view>
+    <view class='t'>
+      <text class='fl'>扣除小数</text>
+      <text class='fr'>{{ managementSpk.value1 }}</text>
+    </view>
+  </view>
 </view>
 
 <view class='list'>
