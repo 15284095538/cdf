@@ -183,28 +183,51 @@ page{
 }  
 
 .xwlist{
-  padding: 30rpx;
+  padding: 0rpx 30rpx 30rpx 30rpx;
   background-color: #fff;
   margin: 30rpx 0 0 0;
   overflow: hidden;
 }
 
 .xwlist .li{
-  height: 60rpx;
-  line-height: 60rpx;
+  overflow: hidden;
   display: flex;
+  margin: 30rpx 0 0 0;
 }
 
-.xwlist .li .p{
-  flex: 1;
+.xwlist .li .img{
+  width: 200rpx;
+  height: 100rpx;
+  display: inline-block;
+  margin-right: 30rpx;
+}
+
+.xwlist .li .img image{
+  width: 200rpx;
+  height: 100rpx;
+  display: block;
+}
+
+.xwlist .li .r{
+  display: inline-block;
+}
+
+.xwlist .li .title{
+  height: 50rpx;
+  line-height: 50rpx;
+  width:  370rpx;
   font-size: 28rpx;
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
 }
 
-.xwlist .li .t{
+.xwlist .li .spk{
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 370rpx;
   font-size: 24rpx;
-  color: #666;
-  margin-right: 20rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }

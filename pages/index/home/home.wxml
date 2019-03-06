@@ -44,8 +44,13 @@
 
 <view class='xwlist'>
   <view catchtap='xwlistde' data-id='{{item.id}}' wx:for="{{xwlist}}" wx:if="{{ index < 3 }}" wx:key="this" wx:for-index="index" wx:for-item="item" class='li'>
-    <view class='p'>{{item.title}}</view>
-    <view class='t'>{{filters.intercept(item.create_time)}}</view>
+    <view class='img'>
+      <image src='{{item.img_url}}'></image>
+    </view>
+    <view class='r'>
+      <view class='title'>{{item.title}}</view>
+      <view class='spk'>{{item.spk}}</view>
+    </view>
   </view>
 </view>
 
