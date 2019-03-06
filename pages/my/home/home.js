@@ -40,7 +40,7 @@ Page({
   onShareAppMessage(res){ //分享
     return {
       title: '您的健康财富从这里开始',
-      imageUrl: 'https://cdf.mmqo.com//upload/20190305/da9bf31a9dd1cb50deb558f5eb6071ee.jpeg',
+      imageUrl: 'https://cdf.mmqo.com/logomini.png',
       path: '/pages/register/register?share_id=' + this.data.userinfoData.code
     }
   },

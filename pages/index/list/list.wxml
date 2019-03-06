@@ -17,7 +17,7 @@
     </view>
     <view class='h5'>{{ item.title }}</view>
     <view class='price'>￥{{ item.price }}</view>
-    <view wx:if="{{ item.type === 1 }}" class='type'>
+    <view wx:if="{{ item.type === 2 }}" class='type'>
       <image src='/images/Giftpackage.png'></image>
     </view>
   </view>
