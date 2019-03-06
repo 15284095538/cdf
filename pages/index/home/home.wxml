@@ -55,7 +55,7 @@
 <wxs src="../../../utils/filters.wxs" module="filters" />
 
 <view class='xwlist'>
-  <view catchtap='xwlistde' data-id='{{item.id}}' wx:for="{{xwlist}}" wx:if="{{ index < 3 }}" wx:key="this" wx:for-index="index" wx:for-item="item" class='li'>
+  <view catchtap='xwlistde' data-id='{{item.id}}' wx:for="{{xwlist}}" wx:if="{{ index < 1 }}" wx:key="this" wx:for-index="index" wx:for-item="item" class='li'>
     <view class='img'>
       <image src='{{item.img_url}}'></image>
     </view>
