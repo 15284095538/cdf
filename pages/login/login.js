@@ -5,10 +5,10 @@ Page({
     tel: '',
     pas: '',
   },
-  onLoad: function (options) {
-    
+  onLoad: function(options) {
+
   },
-  forget(e){
+  forget(e) {
     wx.navigateTo({
       url: '/pages/my/forgetpas/forgetpas',
     })
@@ -42,27 +42,29 @@ Page({
       })
       return false
     }
-
     util.HttpRequst(false, 'user/login', {
-      tel: this.data.tel,
-      password: this.data.pas
-    },//登录
-    'POST', res => {
-      wx.showToast({
-        title: res.message,
-        icon: 'success',
-        duration: 1000
-      })
-      if( res.status == 200 ){
-        wx.setStorage({
-          key: 'userInfo-login',
-          data: res.data
+        tel: this.data.tel,
+        password: this.data.pas,
+        head_url: wx.getStorageSync('userInfo').avatarUrl,
+        nickname: wx.getStorageSync('userInfo').nickName,
+        code: this.data.code
+      }, //登录
+      'POST', res => {
+        wx.showToast({
+          title: res.message,
+          icon: 'success',
+          duration: 1000
         })
-        wx.switchTab({
-          url: '/pages/index/home/home'
-        })
-      }
-    });
+        if (res.status == 200) {
+          wx.setStorage({
+            key: 'userInfo-login',
+            data: res.data
+          })
+          wx.switchTab({
+            url: '/pages/index/home/home'
+          })
+        }
+      });
   },
   tel(e) {
     this.setData({
@@ -74,9 +76,42 @@ Page({
       pas: e.detail.value
     })
   },
-  register(e){ //注册
+  register(e) { //注册
     wx.navigateTo({
       url: '/pages/register/register',
     })
+  },
+  onGotUserInfo(e) {
+    const that = this
+    wx.login({
+      success: res => {
+        var code = res.code;
+        wx.getSetting({
+          success: function (res) {
+            if (res.authSetting['scope.userInfo']) {
+              wx.getUserInfo({
+                success: function (res) {
+                  that.setData({
+                    code: code
+                  })
+                  wx.setStorage({
+                    key: 'userInfo',
+                    data: res.userInfo
+                  })
+                  that.login()
+                }
+              })
+            } else {
+              wx.showToast({
+                title: '请同意微信授权',
+                icon: 'none',
+                duration: 1000
+              })
+            }
+          }
+        })
+      }
+    })
+    
   }
 })

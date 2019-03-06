@@ -9,4 +9,4 @@
   <template is="wxParse" data="{{wxParseData:article.nodes}}" />
 </view>
 
-<view catchtap='sure' class='sure'>查看案列</view>
+<!-- <view catchtap='sure' class='sure'>查看案列</view> -->

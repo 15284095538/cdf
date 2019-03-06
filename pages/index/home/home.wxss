@@ -180,4 +180,31 @@ page{
   height: 40rpx;
   margin: -10rpx 0 0 10rpx;
   vertical-align: middle;
+}  
+
+.xwlist{
+  padding: 30rpx;
+  background-color: #fff;
+  margin: 30rpx 0 0 0;
+  overflow: hidden;
+}
+
+.xwlist .li{
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+}
+
+.xwlist .li .p{
+  flex: 1;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.xwlist .li .t{
+  font-size: 24rpx;
+  color: #666;
+  margin-right: 20rpx;
 }

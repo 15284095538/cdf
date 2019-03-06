@@ -59,6 +59,7 @@ Page({
         share_id: this.data.share_id,
         open_id: this.data.openid,
         head_url: wx.getStorageSync('userInfo').avatarUrl,
+        nickname: wx.getStorageSync('userInfo').nickName
       }, //注册
       'POST', res => {
         wx.showToast({

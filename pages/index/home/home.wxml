@@ -34,6 +34,21 @@
   </view>
 </view>
 
+<view catchtap='xwlist' class='ind-title'>
+  <text class='fl'>新闻动态</text>
+  <text class='fr'>查看更多></text>
+</view>
+
+
+<wxs src="../../../utils/filters.wxs" module="filters" />
+
+<view class='xwlist'>
+  <view catchtap='xwlistde' data-id='{{item.id}}' wx:for="{{xwlist}}" wx:if="{{ index < 3 }}" wx:key="this" wx:for-index="index" wx:for-item="item" class='li'>
+    <view class='p'>{{item.title}}</view>
+    <view class='t'>{{filters.intercept(item.create_time)}}</view>
+  </view>
+</view>
+
 <view class='ind-title'>
   <text class='fl'>热卖商品</text>
 </view>

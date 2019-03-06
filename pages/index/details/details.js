@@ -29,9 +29,29 @@ Page({
     }
   },
   callPhone(e){ //拨打电话
-    wx.makePhoneCall({
-      phoneNumber: this.data.info.mobile
-    })
+    util.PublickHttpRequst(true, 'config/mobile', {},
+      'GET', ress => {
+        if (ress.status == 200) {
+          wx.showActionSheet({
+            itemList: ['QQ'],
+            success(res) {
+              //console.log(res.tapIndex)
+              // if (res.tapIndex == 0 ){
+              //   wx.makePhoneCall({
+              //     phoneNumber: ress.data.mobile
+              //   })
+              // }else{
+
+              // }
+              wx.showModal({
+                title: 'QQ',
+                content: ress.data.qq,
+                success(res) { }
+              })
+            },
+          })
+        }
+      });
   },
   payClick(e){
     const that = this

@@ -17,6 +17,17 @@ Page({
       url: '/pages/index/details/details?id=' + id,
     })
   },
+  xwlist(e){
+    wx.navigateTo({
+      url: '/pages/index/xwlist/xwlist',
+    })
+  },
+  xwlistde(e){
+    let id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/index/xwdetails/xwdetails?id=' + id,
+    })
+  },
   menuClick(e){
     let id = e.currentTarget.dataset.id
     let name = e.currentTarget.dataset.name
@@ -58,6 +69,14 @@ Page({
       'GET', res => {
         that.setData({
           dayCanBuyNum: res.data
+        })
+      });
+    util.HttpRequst(true, 'article/helpLists', { //文章列表
+      type: 3
+    },
+      'GET', res => {
+        that.setData({
+          xwlist: res.data
         })
       });
   }

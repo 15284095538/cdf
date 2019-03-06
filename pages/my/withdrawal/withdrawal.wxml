@@ -14,7 +14,7 @@
       <input type='digit' disabled="true" bindinput='bindinput' value='{{money}}'></input>
     </view>
   </view>
-  <view class='balance'>我的业绩￥{{cash}}，
+  <view class='balance'>可兑换额度￥{{cash}}，
     <text catchtap='all'>全部兑换</text>
   </view>
   <button catchtap='cashout' class='cashout' disabled='{{disabled}}'>兑换</button>
@@ -28,10 +28,10 @@
       <text class='fl'>扣除百分比</text>
       <text class='fr'>{{ managementSpk.value }}</text>
     </view>
-    <view class='t'>
+    <!-- <view class='t'>
       <text class='fl'>扣除小数</text>
       <text class='fr'>{{ managementSpk.value1 }}</text>
-    </view>
+    </view> -->
   </view>
 </view>
 

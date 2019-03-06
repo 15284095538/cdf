@@ -26,8 +26,11 @@ Page({
       content: '确定退出登录',
       success(res) {
         if (res.confirm) {
-          wx.clearStorage()
-          that.onShow()
+          wx.clearStorage({
+            success(res){
+              that.onShow()
+            }
+          })
         } else if (res.cancel) {
           console.log('用户点击取消')
         }
@@ -36,8 +39,8 @@ Page({
   },
   onShareAppMessage(res){ //分享
     return {
-      title: '分享赚取佣金',
-      imageUrl: '/images/logo.jpg',
+      title: '您的健康财富从这里开始',
+      imageUrl: '/images/dsa.jpg',
       path: '/pages/register/register?share_id=' + this.data.userinfoData.code
     }
   },

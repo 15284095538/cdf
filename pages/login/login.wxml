@@ -8,7 +8,10 @@
   <input type="password" class="int" placeholder="请输入密码" bindinput="pas" />
 </view>
 <view catchtap='forget' class="forget">忘记密码？</view>
-<view catchtap='login' class="button">登录</view>
+<!-- <view catchtap='login' class="button">登录</view> -->
+<button class='button' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+  登录
+</button>
 <view catchtap='register' class="register">
   还没有账号，去注册
 </view>

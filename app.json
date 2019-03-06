@@ -32,12 +32,14 @@
     "pages/my/withdrawal/withdrawal",
     "pages/my/purchasing/home/home",
     "pages/my/purchasing/details/details",
-    "pages/my/withdrawal/details"
+    "pages/my/withdrawal/details",
+    "pages/index/xwlist/xwlist",
+    "pages/index/xwdetails/xwdetails"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "茶多酚",
+    "navigationBarTitleText": "资萍康健茶多酚商城",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

@@ -11,10 +11,14 @@ var filters = {
   },
   NumberJs:function(val){
     return Number(val)
+  },
+  intercept: function(val){
+    return val.slice(0, 10)
   }
 }
 module.exports = {
   toFix: filters.toFix,
   toWords: filters.toWords,
   NumberJs: filters.NumberJs,
+  intercept: filters.intercept
 }

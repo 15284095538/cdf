@@ -15,9 +15,9 @@ const formatNumber = n => {
 }
 
 
-const publickbaseUrl = "https://demo.jixinghai.com/chaduofen/public/index.php/";//公告测试环境
+const publickbaseUrl = "https://cdf.mmqo.com/";//公告测试环境
 
-const baseUrl = "https://demo.jixinghai.com/chaduofen/public/index.php/api/";//测试环境
+const baseUrl = "https://cdf.mmqo.com/api/";//测试环境
 
 function UserHttpRequst(loading, url, params, method, callBack) {// 用户token request封装
   if (loading == true) {

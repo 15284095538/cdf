@@ -6,7 +6,13 @@
 
 <view class='sp-info'>
   <view class='h5'>{{ info.title }}</view>
-  <view class='price'>￥{{ info.price }}元</view>
+  <view wx:if="{{ info.type == 1 }}" class='price'>
+    <text style="text-decoration:line-through; color: #666;">￥{{ info.original_price }}元</text>
+    <text style='margin: 0 0 0 20rpx;' >￥{{ info.discount }}元</text>
+  </view>
+  <view wx:if="{{ info.type == 2 }}" class='price'>
+    <text>￥{{ info.price }}元</text>
+  </view>
 </view>
 
 <view class='details'>
