@@ -57,7 +57,6 @@ page{
 
 .ind-news{
   padding: 0 20rpx;
-  height: 80rpx;
   overflow: hidden;
   background-color: #fff;
   display: flex;
@@ -72,15 +71,12 @@ page{
 }
 
 .ind-news .ul{
-  width: 630rpx;
-  flex: 1;
-  height: 80rpx;
-  margin-left: 10rpx;
+  width: 690rpx;
+  height: 300rpx;
 }
 
 .ind-news .sw{
-  width: 630rpx;
-  height: 80rpx;
+  width: 690rpx;
 }
 
 .ind-news .img image{
@@ -89,10 +85,9 @@ page{
 }
 
 .ind-news .li{
-  width: 630rpx;
-  height: 80rpx;
-  line-height: 80rpx;
-  font-size: 26rpx;
+  width: 690rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
@@ -172,7 +167,7 @@ page{
 .ind-newsLst .img{
   width: 60rpx;
   height: 60rpx;
-  margin: 0rpx;
+  margin: 0rpx 10rpx 0 0;
 }
 
 .ind-newsLst .img image{

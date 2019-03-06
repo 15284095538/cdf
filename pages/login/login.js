@@ -42,6 +42,8 @@ Page({
       })
       return false
     }
+    console.log(wx.getStorageSync('userInfo').avatarUrl)
+    console.log(wx.getStorageSync('userInfo').nickName)
     util.HttpRequst(false, 'user/login', {
         tel: this.data.tel,
         password: this.data.pas,
@@ -96,9 +98,13 @@ Page({
                   })
                   wx.setStorage({
                     key: 'userInfo',
-                    data: res.userInfo
+                    data: res.userInfo,
+                    success(res){
+                      setTimeout(res=>{
+                        that.login()
+                      },100)
+                    }
                   })
-                  that.login()
                 }
               })
             } else {

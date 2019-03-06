@@ -46,7 +46,7 @@ Page({
       })
     });
     util.HttpRequst(true, 'roll/lists', {
-      page_num: 50
+      page_num: 25
     },//消息列表
     'GET', res => {
       that.setData({

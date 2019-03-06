@@ -14,13 +14,25 @@
 </view>
 
 <view class='ind-news'>
-  <view class='img'>
+  <!-- <view class='img'>
     <image src='/images/new.png'></image>
-  </view>
+  </view> -->
   <view class='ul'>
     <swiper autoplay='true' interval='1500' circular='true' vertical='true' class='sw'>
-      <swiper-item  wx:for="{{ newList }}" wx:key="this" wx:for-index="index" wx:for-item="item" class='li'>
-        {{ item.content }}
+      <swiper-item class='li'>
+        <view class='li' wx:for="{{ newList }}" wx:if="{{ index < 5 }}" wx:key="this" wx:for-index="index" wx:for-item="item">{{ item.content }}</view>
+      </swiper-item>
+      <swiper-item class='li'>
+        <view class='li' wx:for="{{ newList }}" wx:if="{{ index < 10 && index >= 5 }}" wx:key="this" wx:for-index="index" wx:for-item="item">{{ item.content }}</view>
+      </swiper-item>
+      <swiper-item class='li'>
+        <view class='li' wx:for="{{ newList }}" wx:if="{{ index < 15 && index >= 10 }}" wx:key="this" wx:for-index="index" wx:for-item="item">{{ item.content }}</view>
+      </swiper-item>
+      <swiper-item class='li'>
+        <view class='li' wx:for="{{ newList }}" wx:if="{{ index < 20 && index >= 15 }}" wx:key="this" wx:for-index="index" wx:for-item="item">{{ item.content }}</view>
+      </swiper-item>
+      <swiper-item class='li'>
+        <view class='li' wx:for="{{ newList }}" wx:if="{{ index < 25 && index >= 20 }}" wx:key="this" wx:for-index="index" wx:for-item="item">{{ item.content }}</view>
       </swiper-item>
     </swiper>
   </view>

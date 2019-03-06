@@ -18,10 +18,10 @@
       <view class='top'>可兑换代金券</view>
       <view class='bot'>{{ userinfoData.may_withdraw_integral }}代金券</view>
     </view>
-    <view class='li'>
+    <!-- <view class='li'>
       <view class='top'>今日收获</view>
       <view class='bot'>{{ userinfoData.day_sy_integral }}代金券</view>
-    </view>
+    </view> -->
     <view class='li'>
       <view class='top'>我的业绩</view>
       <view class='bot'>{{ userinfoData.total_integral }}代金券</view>
