@@ -1,6 +1,6 @@
 page{
   background-color: #f5f5f5;
-  color: #333;
+  color: #663300;
 }
 
 .button-hover {
@@ -13,7 +13,7 @@ page{
 
 .info-top{
   width: 750rpx;
-  height: 380rpx;
+  height: 270rpx;
   overflow: hidden;
 }
 
@@ -22,7 +22,7 @@ page{
   padding: 0 30rpx;
   display: flex;
   font-size: 0;
-  margin-top: 100rpx;
+  margin-top: 20rpx;
 }
 
 .info-top .user .img{
@@ -77,7 +77,7 @@ page{
   height: 110rpx;
   overflow: hidden;
   width: 750rpx;
-  margin-top: 50rpx;
+  margin-top: 40rpx;
 }
 
 .info-top .money .li{

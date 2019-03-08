@@ -11,11 +11,16 @@
 </view>
 
 <view class='ind-shopping'>
-  <view class='li' catchtap='detailsClick' data-id='{{ item.id }}' wx:for="{{ shopList }}" wx:key="this" wx:for-index="index" wx:for-item="item" >
+  <view class='li' catchtap='detailsClick' data-id='{{ item.id }}' wx:for="{{ shopList }}" wx:key="this" wx:for-index="index" wx:for-item="item">
     <view class='img'>
       <image src='{{ item.img_url }}'></image>
     </view>
     <view class='h5'>{{ item.title }}</view>
+    <view wx:if="{{ item.type == 1 }}" class='price'>
+      <text style="text-decoration:line-through; color: #666;">原价：￥{{ item.original_price }}元</text>
+      <view style='margin: 0 0 0 0rpx;'>现价：￥{{ item.price }}元</view>
+      <view style='margin: 0 0 0 0rpx; color: #666;'>折扣：{{ item.discount }}</view>
+    </view>
     <view class='price'>￥{{ item.price }}</view>
     <view wx:if="{{ item.type === 2 }}" class='type'>
       <image src='/images/Giftpackage.png'></image>

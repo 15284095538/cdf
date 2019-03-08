@@ -9,6 +9,9 @@ Page({
     animationData: {}
   },
   onLoad: function (options) {
+    
+  },
+  onShow(e){
     this.getData()
   },
   detailsClick(e){
@@ -46,7 +49,7 @@ Page({
       })
     });
     util.HttpRequst(true, 'roll/lists', {
-      page_num: 25
+      page_num: 15
     },//消息列表
     'GET', res => {
       that.setData({

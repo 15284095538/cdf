@@ -1,7 +1,7 @@
 
 <view class='inputInt'>
   <view class='imgTxt'>电话号码：</view>
-  <input type='password' placeholder='请输入电话号码' bindinput='tel' ></input>
+  <input type='number' placeholder='请输入电话号码' bindinput='tel' ></input>
 </view>
 
 <view class='inputInt'>
