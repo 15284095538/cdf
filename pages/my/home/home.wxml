@@ -5,7 +5,7 @@
     </view>
     <view catchtap='editinfo' class='txt'>
       <view class='name'>{{ userinfoData.nickname }}</view>
-      <view class='code'>分享码：{{ userinfoData.code }}</view>
+      <view class='code'>手机号：{{ userinfoData.tel }}</view>
     </view>
     <view class='button YongJin'>
       赚取代金券

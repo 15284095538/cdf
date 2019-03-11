@@ -35,6 +35,9 @@ Page({
     })
   },
   getregister(e) {
+    
+    const that = this
+
     if (this.data.pas.length < 1) {
       wx.showToast({
         title: '请输入密码',
@@ -62,7 +65,7 @@ Page({
       return false
     }
 
-    util.HttpRequst(false, 'user/register', {
+    util.HttpRequst(true, 'user/register', {
         tel: this.data.tel,
         password: this.data.pas,
         code: this.data.code,

@@ -23,6 +23,7 @@ function UserHttpRequst(loading, url, params, method, callBack) {// 用户token 
   if (loading == true) {
     wx.showToast({
       title: '加载中...',
+      mask: true,
       icon: 'loading'
     })
   }
@@ -69,6 +70,7 @@ function HttpRequst(loading, url, params, method, callBack) {// request封装
   if (loading == true) {
     wx.showToast({
       title: '加载中...',
+      mask: true,
       icon: 'loading'
     })
   }
@@ -99,6 +101,7 @@ function PublickHttpRequst(loading, url, params, method, callBack) {// request�
   if (loading == true) {
     wx.showToast({
       title: '加载中...',
+      mask: true,
       icon: 'loading'
     })
   }

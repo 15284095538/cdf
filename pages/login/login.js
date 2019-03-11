@@ -56,7 +56,7 @@ Page({
       return false
     }
     
-    util.HttpRequst(false, 'user/login', {
+    util.HttpRequst(true, 'user/login', {
         tel: this.data.tel,
         password: this.data.pas,
         head_url: wx.getStorageSync('userInfo').avatarUrl,

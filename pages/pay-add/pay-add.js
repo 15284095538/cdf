@@ -19,6 +19,8 @@ Page({
   },
   addClick(e) { //创建订单
 
+    const that = this
+
     that.setData({
       Isbutton: false
     })

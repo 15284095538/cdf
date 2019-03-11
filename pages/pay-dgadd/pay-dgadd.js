@@ -25,7 +25,8 @@ Page({
     timer: '', //定时器名字
     countDownNum: '60', //倒计时初始值
     codeTips: '获取验证码',
-    goods_id:''
+    goods_id:'',
+    Isbutton: true
   },
   code(e){
     this.setData({ code: e.detail.value })
@@ -45,23 +46,23 @@ Page({
   getcode(e) {
     const that = this
     const myreg = /^[1][3,4,5,7,8][0-9]{9}$/
-    if (this.data.phone.length < 11) {
-      wx.showToast({
-        title: '请输入正确手机号',
-        icon: 'none',
-        duration: 1000
-      })
-      return false
-    }
+    // if (this.data.phone.length < 11) {
+    //   wx.showToast({
+    //     title: '请输入正确手机号',
+    //     icon: 'none',
+    //     duration: 1000
+    //   })
+    //   return false
+    // }
 
-    if (!myreg.test(this.data.phone)) {
-      wx.showToast({
-        title: '请输入正确手机号',
-        icon: 'none',
-        duration: 1000
-      })
-      return false
-    }
+    // if (!myreg.test(this.data.phone)) {
+    //   wx.showToast({
+    //     title: '请输入正确手机号',
+    //     icon: 'none',
+    //     duration: 1000
+    //   })
+    //   return false
+    // }
 
     if (this.data.countDownNum == 60) {
       util.PublickHttpRequst(false, 'code/send', {
@@ -219,24 +220,29 @@ Page({
   addClick(e) {
     const that = this
     var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
-    if (this.data.phone.length < 11 && this.data.phone.length) {
-      wx.showToast({
-        title: '请输入正确手机号',
-        icon: 'none',
-        duration: 500,
-        mask: true
-      })
-      return false
-    }
-    if (!myreg.test(this.data.phone)) {
-      wx.showToast({
-        title: '请输入正确手机号',
-        icon: 'none',
-        duration: 500,
-        mask: true
-      })
-      return false
-    }
+    // if (this.data.phone.length < 11 && this.data.phone.length) {
+    //   wx.showToast({
+    //     title: '请输入正确手机号',
+    //     icon: 'none',
+    //     duration: 500,
+    //     mask: true
+    //   })
+    //   return false
+    // }
+    // if (!myreg.test(this.data.phone)) {
+    //   wx.showToast({
+    //     title: '请输入正确手机号',
+    //     icon: 'none',
+    //     duration: 500,
+    //     mask: true
+    //   })
+    //   return false
+    // }
+    that.setData({
+      Isbutton: false
+    })
+  
+
     if (!this.data.name) {
       wx.showToast({
         title: '请输入收货人姓名',
@@ -273,6 +279,16 @@ Page({
       })
       return false
     }
+
+    if (this.data.Isbutton) {
+      wx.showToast({
+        title: '请不要重复点击',
+        icon: 'none',
+        duration: 1000
+      })
+      return false
+    }
+
     util.UserHttpRequst(true, 'order/dgAdd', {
       goods_id: this.data.goods_id,
       tel: this.data.phone,
@@ -283,6 +299,10 @@ Page({
       address_tel: this.data.address_tel
     },
       'POST', res => {
+
+        that.setData({
+          Isbutton: true
+        })
         
         if (res.status == 400 ){
           setTimeout(ress=>{
@@ -292,7 +312,7 @@ Page({
               duration: 500,
               mask: true
             })
-          },500)
+          },1)
         }else{
           wx.requestPayment({ //微信支付
             timeStamp: res.data.payInfo.timestamp,
