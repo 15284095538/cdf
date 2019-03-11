@@ -10,7 +10,8 @@ Page({
     checkboxFalse: false,
     timer: '', //定时器名字
     countDownNum: '60', //倒计时初始值
-    openid: ''
+    openid: '',
+    Isbutton: true
   },
   onLoad: function(e) {
     if (!e.share_id){
@@ -52,6 +53,15 @@ Page({
       return false
     }
 
+    if (this.data.Isbutton) {
+      wx.showToast({
+        title: '请不要重复点击',
+        icon: 'none',
+        duration: 1000
+      })
+      return false
+    }
+
     util.HttpRequst(false, 'user/register', {
         tel: this.data.tel,
         password: this.data.pas,
@@ -67,6 +77,9 @@ Page({
           icon: 'none',
           duration: 1000
         })
+        that.setData({
+          Isbutton: true
+        })
         setTimeout(res => {
           wx.redirectTo({
             url: '/pages/login/login',
@@ -77,23 +90,23 @@ Page({
   getcode(e) {
     const that = this
     const myreg = /^[1][3,4,5,7,8][0-9]{9}$/
-    if (this.data.tel.length < 11) {
-      wx.showToast({
-        title: '请输入正确手机号',
-        icon: 'none',
-        duration: 1000
-      })
-      return false
-    }
+    // if (this.data.tel.length < 11) {
+    //   wx.showToast({
+    //     title: '请输入正确手机号',
+    //     icon: 'none',
+    //     duration: 1000
+    //   })
+    //   return false
+    // }
 
-    if (!myreg.test(this.data.tel)) {
-      wx.showToast({
-        title: '请输入正确手机号',
-        icon: 'none',
-        duration: 1000
-      })
-      return false
-    }
+    // if (!myreg.test(this.data.tel)) {
+    //   wx.showToast({
+    //     title: '请输入正确手机号',
+    //     icon: 'none',
+    //     duration: 1000
+    //   })
+    //   return false
+    // }
 
     if (this.data.countDownNum == 60) {
       util.PublickHttpRequst(false, 'code/send', {
@@ -181,7 +194,8 @@ Page({
             wx.getUserInfo({
               success: function(res) {
                 that.setData({
-                  openid: data.openId
+                  openid: data.openId,
+                  Isbutton: false
                 })
                 wx.setStorage({
                   key: 'userInfo',

@@ -62,7 +62,7 @@
 					"id": 3,
 					"name": "注册",
 					"pathName": "pages/register/register",
-					"query": "share_id=89",
+					"query": "",
 					"scene": null
 				},
 				{

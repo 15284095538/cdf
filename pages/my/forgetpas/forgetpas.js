@@ -16,23 +16,23 @@ Page({
   getcode(e) {
     const that = this
     const myreg = /^[1][3,4,5,7,8][0-9]{9}$/
-    if (this.data.tel.length < 11) {
-      wx.showToast({
-        title: '请输入正确手机号',
-        icon: 'none',
-        duration: 1000
-      })
-      return false
-    }
+    // if (this.data.tel.length < 11) {
+    //   wx.showToast({
+    //     title: '请输入正确手机号',
+    //     icon: 'none',
+    //     duration: 1000
+    //   })
+    //   return false
+    // }
 
-    if (!myreg.test(this.data.tel)) {
-      wx.showToast({
-        title: '请输入正确手机号',
-        icon: 'none',
-        duration: 1000
-      })
-      return false
-    }
+    // if (!myreg.test(this.data.tel)) {
+    //   wx.showToast({
+    //     title: '请输入正确手机号',
+    //     icon: 'none',
+    //     duration: 1000
+    //   })
+    //   return false
+    // }
     if (this.data.countDownNum == 60) {
       util.PublickHttpRequst(false, 'code/send', {
           tel: this.data.tel,

@@ -6,7 +6,8 @@ Page({
     address_id: '',
     address: ' ',
     adressList: [],
-    layerDisplay: false
+    layerDisplay: false,
+    Isbutton: true
   },
   onLoad: function(e) {
     this.setData({
@@ -17,12 +18,29 @@ Page({
     this.getData()
   },
   addClick(e) { //创建订单
+
+    that.setData({
+      Isbutton: false
+    })
+
+    if (this.data.Isbutton) {
+      wx.showToast({
+        title: '请不要重复点击',
+        icon: 'none',
+        duration: 1000
+      })
+      return false
+    }
+
     util.UserHttpRequst(true, 'order/add', {
       goods_id: this.data['goods-id'],
       address_id: this.data.address_id
     },
       'POST', res => {
         console.log(res.data)
+        that.setData({
+          Isbutton: true
+        })
         wx.requestPayment({ //微信支付
           timeStamp: res.data.payInfo.timestamp,
           nonceStr: res.data.payInfo.nonceStr,

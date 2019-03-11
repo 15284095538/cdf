@@ -4,6 +4,7 @@ Page({
   data: {
     tel: '',
     pas: '',
+    Isbutton: true
   },
   onLoad: function(options) {
 
@@ -15,19 +16,31 @@ Page({
   },
   login(e) {
     const that = this
+    that.setData({
+      Isbutton: false
+    })
     const myreg = /^[1][3,4,5,7,8][0-9]{9}$/
-    if (this.data.tel.length < 11) {
-      wx.showToast({
-        title: '请输入正确手机号',
-        icon: 'none',
-        duration: 1000
-      })
-      return false
-    }
+    // if (this.data.tel.length < 11) {
+    //   wx.showToast({
+    //     title: '请输入正确手机号',
+    //     icon: 'none',
+    //     duration: 1000
+    //   })
+    //   return false
+    // }
 
-    if (!myreg.test(this.data.tel)) {
+    // if (!myreg.test(this.data.tel)) {
+    //   wx.showToast({
+    //     title: '请输入正确手机号',
+    //     icon: 'none',
+    //     duration: 1000
+    //   })
+    //   return false
+    // }
+
+    if (this.data.Isbutton) {
       wx.showToast({
-        title: '请输入正确手机号',
+        title: '请不要重复点击',
         icon: 'none',
         duration: 1000
       })
@@ -42,8 +55,7 @@ Page({
       })
       return false
     }
-    console.log(wx.getStorageSync('userInfo').avatarUrl)
-    console.log(wx.getStorageSync('userInfo').nickName)
+    
     util.HttpRequst(false, 'user/login', {
         tel: this.data.tel,
         password: this.data.pas,
@@ -56,6 +68,9 @@ Page({
           title: res.message,
           icon: 'success',
           duration: 1000
+        })
+        that.setData({
+          Isbutton: true
         })
         if (res.status == 200) {
           wx.setStorage({
