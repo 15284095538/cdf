@@ -118,12 +118,12 @@ Page({
             wx.showToast({
               title: message,
               icon: 'none',
-              duration: 1000
+              duration: 2000
             })
             setTimeout(res=>{
               that.data.newlist = []
               that.getlist();
-            },1000)
+            },2000)
           },500)
         });
     }

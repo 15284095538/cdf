@@ -25,7 +25,7 @@ Page({
   onLoad: function (options) {
     // 初始化动画变量
     var animation = wx.createAnimation({
-      duration: 500,
+      duration: 2000,
       transformOrigin: "50% 50%",
       timingFunction: 'ease',
     })
@@ -127,7 +127,7 @@ Page({
       wx.showToast({
         title: '请输入正确手机号',
         icon: 'none',
-        duration: 500,
+        duration: 2000,
         mask: true
       })
       return false
@@ -136,7 +136,7 @@ Page({
       wx.showToast({
         title: '请输入正确手机号',
         icon: 'none',
-        duration: 500,
+        duration: 2000,
         mask: true
       })
       return false
@@ -145,7 +145,7 @@ Page({
       wx.showToast({
         title: '请输入联系人',
         icon: 'none',
-        duration: 500,
+        duration: 2000,
         mask: true
       })
       return false
@@ -154,7 +154,7 @@ Page({
       wx.showToast({
         title: '请输入街道门牌信息',
         icon: 'none',
-        duration: 500,
+        duration: 2000,
         mask: true
       })
       return false

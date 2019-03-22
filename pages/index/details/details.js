@@ -73,7 +73,7 @@ Page({
             wx.showToast({
               title: that.data.canbuy.txt,
               icon: 'none',
-              duration: 1000
+              duration: 2000
             })
             return false
           }

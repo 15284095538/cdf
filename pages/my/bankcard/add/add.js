@@ -44,7 +44,7 @@ Page({
       wx.showToast({
         title: '请选择银行',
         icon: 'none',
-        duration: 500,
+        duration: 2000,
         mask: true
       })
       return false
@@ -53,7 +53,7 @@ Page({
       wx.showToast({
         title: '请输入银行卡号',
         icon: 'none',
-        duration: 500,
+        duration: 2000,
         mask: true
       })
       return false
@@ -62,7 +62,7 @@ Page({
       wx.showToast({
         title: '请输入收款人姓名',
         icon: 'none',
-        duration: 500,
+        duration: 2000,
         mask: true
       })
       return false
@@ -78,11 +78,11 @@ Page({
           wx.showToast({
             title: data.message,
             icon: 'none',
-            duration: 500,
+            duration: 2000,
             mask: true
           })
           wx.navigateBack()
-        },500)
+        },2000)
       });
   }
 })

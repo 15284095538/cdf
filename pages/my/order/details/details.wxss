@@ -73,7 +73,7 @@ page{
   line-height: 50rpx;
   width: 150rpx;
   border: 1rpx solid #663300;
-  font-size: 24rpx;
+  font-size: 28rpx;
   text-align: center;
   border-radius: 20rpx;
   margin-right: 30rpx;
@@ -83,4 +83,42 @@ page{
 .list .li .bot .close{
   color: #a9a9a9;
   border: 1rpx solid #a9a9a9;
+}
+
+.scrollview{
+  background-color: #e2e2e2;
+  overflow: hidden;
+  padding: 30rpx;
+}
+
+.scrollview .con{
+  background-color: #fff;
+  width: 690rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
+  padding: 20rpx 0;
+}
+
+.scrollview .con .li{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  width: 630rpx;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.scrollview .con .ul{
+  width: 630rpx;
+  margin: 10rpx auto 0;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+
+
+.scrollview .con .l{
+  float: left;
+}
+
+.scrollview .con .r{
+  float: right;
 }

@@ -28,7 +28,7 @@ Page({
         wx.showToast({
           title: res.message,
           icon: 'none',
-          duration: 1000,
+          duration: 2000,
         })
         setTimeout(res => {
           that.getData()

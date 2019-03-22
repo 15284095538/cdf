@@ -24,7 +24,7 @@ Page({
     //   wx.showToast({
     //     title: '请输入正确手机号',
     //     icon: 'none',
-    //     duration: 1000
+    //     duration: 2000
     //   })
     //   return false
     // }
@@ -33,7 +33,7 @@ Page({
     //   wx.showToast({
     //     title: '请输入正确手机号',
     //     icon: 'none',
-    //     duration: 1000
+    //     duration: 2000
     //   })
     //   return false
     // }
@@ -42,7 +42,7 @@ Page({
       wx.showToast({
         title: '请不要重复点击',
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
       return false
     }
@@ -51,7 +51,7 @@ Page({
       wx.showToast({
         title: '请输入密码',
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
       return false
     }
@@ -64,11 +64,13 @@ Page({
         code: this.data.code
       }, //登录
       'POST', res => {
-        wx.showToast({
-          title: res.message,
-          icon: 'success',
-          duration: 1000
-        })
+        setTimeout(ress=>{
+          wx.showToast({
+            title: res.message,
+            icon: 'none',
+            duration: 2000
+          })
+        },100)
         that.setData({
           Isbutton: true
         })
@@ -126,7 +128,7 @@ Page({
               wx.showToast({
                 title: '请同意微信授权',
                 icon: 'none',
-                duration: 1000
+                duration: 2000
               })
             }
           }

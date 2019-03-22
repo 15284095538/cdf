@@ -25,14 +25,14 @@ Page({
             wx.showToast({
               title: message,
               icon: 'none',
-              duration: 1000,
+              duration: 2000,
               success(e) {
                 setTimeout(res => {
                   wx.navigateBack()
                 }, 200)
               }
             })
-          }, 1000)
+          }, 2000)
         }
       });
   },
@@ -49,14 +49,14 @@ Page({
             wx.showToast({
               title: message,
               icon: 'none',
-              duration: 1000,
+              duration: 2000,
               success(e) {
                 setTimeout(res => {
                   that.getdata()
                 }, 200)
               }
             })
-          }, 1000)
+          }, 2000)
         }
       });
   },
@@ -95,14 +95,14 @@ Page({
             wx.showToast({
               title: message,
               icon: 'none',
-              duration: 1000,
+              duration: 2000,
               success(e) {
                 setTimeout(res => {
                   that.getdata()
                 }, 200)
               }
             })
-          }, 1000)
+          }, 2000)
         }
       });
   },

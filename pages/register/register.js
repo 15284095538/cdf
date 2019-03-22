@@ -42,7 +42,7 @@ Page({
       wx.showToast({
         title: '请输入密码',
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
       return false
     }
@@ -51,7 +51,7 @@ Page({
       wx.showToast({
         title: '请同意用户协议',
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
       return false
     }
@@ -60,7 +60,7 @@ Page({
       wx.showToast({
         title: '请不要重复点击',
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
       return false
     }
@@ -75,11 +75,13 @@ Page({
         nickname: wx.getStorageSync('userInfo').nickName
       }, //注册
       'POST', res => {
-        wx.showToast({
-          title: res.message,
-          icon: 'none',
-          duration: 1000
-        })
+        setTimeout(ress => {
+          wx.showToast({
+            title: res.message,
+            icon: 'none',
+            duration: 2000
+          })
+        }, 100)
         that.setData({
           Isbutton: true
         })
@@ -87,7 +89,7 @@ Page({
           wx.redirectTo({
             url: '/pages/login/login',
           })
-        }, 1000)
+        }, 2000)
       });
   },
   getcode(e) {
@@ -97,7 +99,7 @@ Page({
     //   wx.showToast({
     //     title: '请输入正确手机号',
     //     icon: 'none',
-    //     duration: 1000
+    //     duration: 2000
     //   })
     //   return false
     // }
@@ -106,7 +108,7 @@ Page({
     //   wx.showToast({
     //     title: '请输入正确手机号',
     //     icon: 'none',
-    //     duration: 1000
+    //     duration: 2000
     //   })
     //   return false
     // }
@@ -120,7 +122,7 @@ Page({
           wx.showToast({
             title: res.message,
             icon: 'success',
-            duration: 1000
+            duration: 2000
           })
           that.countDown();
         });
@@ -128,7 +130,7 @@ Page({
       wx.showToast({
         title: '请60s后在获取验证码',
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
     }
   },
@@ -181,7 +183,7 @@ Page({
             codeTips: '获取验证码'
           })
         }
-      }, 1000)
+      }, 2000)
     })
   },
   onGotUserInfo(e) {

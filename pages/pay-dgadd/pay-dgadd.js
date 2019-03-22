@@ -50,7 +50,7 @@ Page({
     //   wx.showToast({
     //     title: '请输入正确手机号',
     //     icon: 'none',
-    //     duration: 1000
+    //     duration: 2000
     //   })
     //   return false
     // }
@@ -59,7 +59,7 @@ Page({
     //   wx.showToast({
     //     title: '请输入正确手机号',
     //     icon: 'none',
-    //     duration: 1000
+    //     duration: 2000
     //   })
     //   return false
     // }
@@ -73,7 +73,7 @@ Page({
           wx.showToast({
             title: res.message,
             icon: 'success',
-            duration: 1000
+            duration: 2000
           })
           that.countDown();
         });
@@ -81,7 +81,7 @@ Page({
       wx.showToast({
         title: '请60s后在获取验证码',
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
     }
   },
@@ -102,7 +102,7 @@ Page({
             codeTips: '获取验证码'
           })
         }
-      }, 1000)
+      }, 2000)
     })
   },
   onGotUserInfo(e) {
@@ -284,7 +284,7 @@ Page({
       wx.showToast({
         title: '请不要重复点击',
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
       return false
     }
@@ -324,7 +324,7 @@ Page({
               wx.showToast({
                 title: '支付成功',
                 icon: 'none',
-                duration: 1000,
+                duration: 2000,
                 success() {
                   setTimeout(res => {
                     wx.switchTab({
@@ -338,7 +338,7 @@ Page({
               wx.showToast({
                 title: '支付失败',
                 icon: 'none',
-                duration: 1000,
+                duration: 2000,
                 success() {
                   setTimeout(res => {
                     wx.switchTab({

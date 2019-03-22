@@ -31,7 +31,7 @@ Page({
       wx.showToast({
         title: '请输入旧密码',
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
       return false
     }
@@ -40,7 +40,7 @@ Page({
       wx.showToast({
         title: '请输入新密码',
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
       return false
     }
@@ -49,7 +49,7 @@ Page({
       wx.showToast({
         title: '请再次输入新密码',
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
       return false
     }
@@ -64,7 +64,7 @@ Page({
       wx.showToast({
         title: data.message,
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
       if (data.status == 200) {
         wx.navigateBack()

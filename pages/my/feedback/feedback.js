@@ -30,10 +30,10 @@ Page({
           wx.showToast({
             title: message,
             icon: 'none',
-            duration: 1000
+            duration: 2000
           })
           wx.navigateBack()
-        }, 1000)
+        }, 2000)
       }
     });
   }

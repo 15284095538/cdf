@@ -1,6 +1,6 @@
 <view class="newsList">
-  <view class='li' wx:for='{{newlist}}' catchtap='godetail' data-id='{{item.id}}'>
-    <view class='tit'><view class='spot' wx:if='{{ item.status == 1 }}'></view>{{item.title}}</view>
+  <view class='li' wx:for='{{newlist}}' wx:key="this" wx:for-index="index" wx:for-item="item" catchtap='godetail' data-id='{{item.id}}'>
+    <view class='tit'><view class='spot'  wx:if='{{ item.status == 1 }}'></view>{{item.title}}</view>
     <view class='time'>{{item.create_time}}</view>
   </view>
 </view>

@@ -29,7 +29,7 @@ Page({
       wx.showToast({
         title: '请不要重复点击',
         icon: 'none',
-        duration: 1000
+        duration: 2000
       })
       return false
     }
@@ -53,7 +53,7 @@ Page({
             wx.showToast({
               title: '支付成功',
               icon: 'none',
-              duration: 1000,
+              duration: 2000,
               success(res) {
                 setTimeout(res => {
                   wx.switchTab({
@@ -67,7 +67,7 @@ Page({
             wx.showToast({
               title: '支付失败',
               icon: 'none',
-              duration: 1000,
+              duration: 2000,
               success() {
                 setTimeout(res => {
                   wx.switchTab({
