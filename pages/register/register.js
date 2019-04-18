@@ -6,7 +6,7 @@ Page({
     tel: '',
     pas: '',
     share_id: '',
-    code: '999999',
+    code: '',
     checkboxFalse: false,
     timer: '', //定时器名字
     countDownNum: '60', //倒计时初始值
@@ -16,10 +16,10 @@ Page({
   onLoad: function(e) {
     if (!e.share_id){
       e.share_id = ''
+    }else{
+      wx.setStorageSync('share_id', e.share_id)
     }
-    this.setData({
-      share_id: e.share_id
-    })
+    
   },
   register(e){
     wx.redirectTo({
@@ -69,7 +69,7 @@ Page({
         tel: this.data.tel,
         password: this.data.pas,
         code: this.data.code,
-        share_id: this.data.share_id,
+        share_id: wx.getStorageSync('share_id'),
         open_id: this.data.openid,
         head_url: wx.getStorageSync('userInfo').avatarUrl,
         nickname: wx.getStorageSync('userInfo').nickName
@@ -85,11 +85,13 @@ Page({
         that.setData({
           Isbutton: true
         })
-        setTimeout(res => {
-          wx.redirectTo({
-            url: '/pages/login/login',
-          })
-        }, 2000)
+        if(res.code ===200){
+          setTimeout(res => {
+            wx.redirectTo({
+              url: '/pages/login/login',
+            })
+          }, 2000)
+        }
       });
   },
   getcode(e) {

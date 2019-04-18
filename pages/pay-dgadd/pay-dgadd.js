@@ -21,7 +21,7 @@ Page({
     addree: '',
     name:'',
     address_tel: '',
-    code:'999999',
+    code:'',
     timer: '', //定时器名字
     countDownNum: '60', //倒计时初始值
     codeTips: '获取验证码',

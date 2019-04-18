@@ -7,7 +7,7 @@
 <view class="Inputbox">
   <input class="int" type='number' placeholder="请输入密码" bindinput="pas" />
 </view>
-<view class="Inputbox">
+<view class="Inputbox" wx-if="" >
   <input class="int" type='number' placeholder="请输入推荐码" value='{{share_id}}' bindinput="share_id" />
 </view>
 <view class="Inputbox">

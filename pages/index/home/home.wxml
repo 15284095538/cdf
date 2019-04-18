@@ -1,4 +1,4 @@
-<swiper class='ind-swiper' indicator-dots="true" indicator-color="rgba(214,241,243,1)" indicator-active-color="rgba(255,255,255,1)">
+<swiper class='ind-swiper' interval="3000" indicator-dots="true" autoplay="true" indicator-color="rgba(214,241,243,1)" indicator-active-color="rgba(255,255,255,1)">
   <swiper-item wx:for="{{ bannerList }}" wx:key="this" wx:for-index="index" wx:for-item="item">
     <image src="{{item.img_url}}" class="slide-image" />
   </swiper-item>
@@ -47,10 +47,10 @@
 </view>
 
 
-<view catchtap='xwlist' style='color: red;' class='ind-title'>
+<!-- <view catchtap='xwlist' style='color: red;' class='ind-title'>
   <text class='fl'>新闻动态</text>
   <text class='fr'>查看更多></text>
-</view>
+</view> -->
 
 
 <!-- <wxs src="../../../utils/filters.wxs" module="filters" />

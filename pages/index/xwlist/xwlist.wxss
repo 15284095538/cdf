@@ -35,6 +35,9 @@ page{
   height: 50rpx;
   line-height: 50rpx;
   width: 400rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }
 
 .list .li .spk{

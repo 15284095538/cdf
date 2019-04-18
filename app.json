@@ -61,8 +61,8 @@
         "selectedIconPath": "/images/4.png"
       },
       {
-        "pagePath": "pages/consulting/home/home",
-        "text": "咨询",
+        "pagePath": "pages/index/xwlist/xwlist",
+        "text": "新闻动态",
         "iconPath": "/images/5.png",
         "selectedIconPath": "/images/6.png"
       },
